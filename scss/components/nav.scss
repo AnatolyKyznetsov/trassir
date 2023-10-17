@@ -1,0 +1,113 @@
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    &__drop {
+        @mixin linkSelected {
+            color: var(--color-white);
+            background: var(--color-conv-second-dark);
+
+            svg {
+                stroke: var(--color-white);
+            }
+        }
+
+        position: relative;
+        z-index: 10;
+
+        &.is-active {
+            @include linkSelected;
+
+            .nav__drop-item {
+                color: var(--color-white);
+            }
+        }
+        
+        &:hover {
+            .nav__drop-list {
+                overflow: visible;
+                height: auto;
+                opacity: 1;
+                pointer-events: auto;
+            }
+
+            & > .nav__link {
+                @include linkSelected;
+
+                svg {
+                    transform: rotateX(180deg);
+                }
+            }
+        }
+    }
+
+    &__drop-item {
+        @extend .nav__link;
+
+        transition: .2s linear;
+        white-space: nowrap;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+
+        svg {
+            width: 16px;
+            height: 16px;
+            stroke: var(--color-conv-second-dark);
+        }
+
+        &:not([href]) {
+            cursor: default;
+        }
+    }
+
+    &__drop-list {
+        min-width: calc(100% + 32px);
+        border-radius: 0 0 var(--radius-standard) var(--radius-standard);
+        transition: .1s linear;
+        position: absolute;
+        background: var(--color-white);
+        white-space: nowrap;
+        display: flex;
+        flex-direction: column;
+        top: 100%;
+        left: 0;
+        overflow: hidden;
+        height: 0;
+        opacity: 0;
+        pointer-events: none;
+
+        .nav__link {
+            height: 48px;
+            display: flex;
+            align-items: center;
+            padding: 0px 24px;
+            width: 100%;
+            border: 1px solid var(--color-main-middle);
+
+            &:hover {
+                border: 1px solid var(--color-conv-second-dark);
+            }
+        }
+    }
+
+    &__link {
+        transition: .2s linear;
+        padding: 45px 15px;
+        color: var(--color-conv-second-dark);
+        font-size: 16px;
+
+        &.is-active,
+        &:hover {
+            color: var(--color-white);
+            background: var(--color-conv-second-dark);
+        }
+    }
+} 
+
+@media screen and (max-width: $lg) {
+    .nav {
+        display: none;
+    }    
+}

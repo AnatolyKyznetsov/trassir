@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="./favicon.ico">
+    <link rel="stylesheet" href="./local/css/vendors/swiper-bundle.min.css">
+    <link rel="stylesheet" href="./scss/style.scss">
+    <title>TRASSIR</title>
+</head>
+<body>
+    <div id="app" class="app">
+        <header class="header js-header">
+            <div class="container js-headerContainer">
+                <div class="header__wrapper">
+                    <div class="header__inner">
+                        <a href="/" class="header__logo js-headerLogo">
+                            <img src="./images/logo.svg" alt="">
+                        </a>
+
+                        <div class="header__mobile">
+                            <button class="button-reset header__search_mob js-headerSearchMob">
+                                <svg>
+                                    <use xlink:href="./images/_sprite.svg#search"></use>
+                                </svg>
+                            </button>
+                            <button class="button-reset burger js-burger">
+                                <svg class="burger__icon">
+                                    <use xlink:href="./images/_sprite.svg#menu"></use>
+                                </svg>
+                                <svg class="burger__cross">
+                                    <use xlink:href="./images/_sprite.svg#menu-cross"></use>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="nav js-headerNav">
+                        <div class="nav__drop">
+                            <a href="javascript:void(0)" class="nav__drop-item">
+                                Каталог
+                                <svg>
+                                    <use xlink:href="./images/_sprite.svg#angle"></use>
+                                </svg>
+                            </a>
+                            <div class="nav__drop-list">
+                                <a href="javascript:void(0)" class="nav__link">
+                                    Видеорегистраторы
+                                </a>
+                                <a href="javascript:void(0)" class="nav__link">
+                                    Камеры видеонаблюдения
+                                </a>
+                                <a href="javascript:void(0)" class="nav__link">
+                                    Программное обеспечение
+                                </a>
+                            </div>
+                        </div>
+                        <div class="nav__drop">
+                            <a class="nav__drop-item">
+                                Продукты
+                                <svg>
+                                    <use xlink:href="./images/_sprite.svg#angle"></use>
+                                </svg>
+                            </a>
+                            <div class="nav__drop-list">
+                                <a href="javascript:void(0)" class="nav__link">
+                                    Видеоаналитические модули
+                                </a>
+                                <a href="javascript:void(0)" class="nav__link">
+                                    Мониторинг системы видеонаблюдения
+                                </a>
+                                <a href="javascript:void(0)" class="nav__link">
+                                    Управление системой видеонаблюдения
+                                </a>
+                                <a href="javascript:void(0)" class="nav__link">
+                                    СКУД
+                                </a>
+                                <a href="javascript:void(0)" class="nav__link">
+                                    Облачный сервис
+                                </a>
+                            </div>
+                        </div>
+                        <div class="nav__drop">
+                            <a class="nav__drop-item">
+                                Отраслевые решения
+                                <svg>
+                                    <use xlink:href="./images/_sprite.svg#angle"></use>
+                                </svg>
+                            </a>
+                            <div class="nav__drop-list">
+                                <a href="javascript:void(0)" class="nav__link">
+                                    Test
+                                </a>
+                            </div>
+                        </div>
+                        <div class="nav__drop">
+                            <a class="nav__drop-item">
+                                Поддержка
+                                <svg>
+                                    <use xlink:href="./images/_sprite.svg#angle"></use>
+                                </svg>
+                            </a>
+                            <div class="nav__drop-list">
+                                <a href="javascript:void(0)" class="nav__link">
+                                    Test
+                                </a>
+                            </div>
+                        </div>
+                        <div class="nav__drop">
+                            <a class="nav__drop-item">
+                                Клиентам
+                                <svg>
+                                    <use xlink:href="./images/_sprite.svg#angle"></use>
+                                </svg>
+                            </a>
+                            <div class="nav__drop-list">
+                                <a href="javascript:void(0)" class="nav__link">
+                                    Test
+                                </a>
+                            </div>
+                        </div>
+                        <div class="nav__drop">
+                            <a class="nav__drop-item">
+                                О компании
+                                <svg>
+                                    <use xlink:href="./images/_sprite.svg#angle"></use>
+                                </svg>
+                            </a>
+                            <div class="nav__drop-list">
+                                <a href="javascript:void(0)" class="nav__link">
+                                    Test
+                                </a>
+                            </div>
+                        </div>
+                        <a href="javascript:void(0)" class="nav__link">
+                            Контакты
+                        </a>
+                    </div>
+                </div>
+                <div class="header__tools js-headerTools">
+                    <a href="tel:+74951330461" class="header__icon header__icon_stroke">
+                        <svg>
+                            <use xlink:href="./images/_sprite.svg#phone"></use>
+                        </svg>
+                    </a>
+                    <a href="javascript:void(0)" class="button-reset header__icon header__icon_stroke">
+                        <svg>
+                            <use xlink:href="./images/_sprite.svg#user"></use>
+                        </svg>
+                    </a>
+                    <div class="header__search js-headerSearch">
+                        <button class="button-reset header__icon header__icon_fill js-headerSearchBtn">
+                            <svg>
+                                <use xlink:href="./images/_sprite.svg#search"></use>
+                            </svg>
+                        </button>
+                        <form class="header__search-form js-headerSearchForm">
+                            <input type="text" placeholder="Поиск по каталогу" class="header__search-input js-headerSearchInput">
+                            <button type="submit" class="button button__conversion button_for-input">
+                                Найти
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="header__menu-mob js-headerMenuMob"></div>
+        </header>
+
+        {{#if innerPage}}
+            <section class="app__head">
+                <div class="container">
+                    <div class="breadcrumbs">
+                        <a href="javascript:void(0)" class="breadcrumbs__link">Главная</a>
+                        <a href="javascript:void(0)" class="breadcrumbs__link">Каталог</a>
+                        <a href="javascript:void(0)" class="breadcrumbs__link">Камеры</a>
+                        <span class="breadcrumbs__current">Тестовая камера</span>
+                    </div>
+                    <h1 class="app__title">
+                        Заголовок страницы
+                    </h1>
+                    <p class="app__description">
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Similique animi aspernatur ullam, dolores harum reiciendis iure autem explicabo. Excepturi odio eum enim quidem earum inventore doloribus, cumque aspernatur odit laboriosam?
+                    </p>
+                </div>
+            </section>
+        {{/if}}

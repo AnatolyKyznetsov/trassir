@@ -1,0 +1,73 @@
+.button {
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+    border: 0;
+    outline: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 54px;
+    padding: 0 32px 0 42px;
+    font-family: var(--font-main);
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.3;
+    color: var(--color-white);
+    border-radius: 50px var(--radius-standard) var(--radius-standard) var(--radius-standard);
+    transition: .1s linear;
+
+    &-reset {
+        border: 0;
+        outline: 0;
+        background: transparent;
+        margin: 0;
+        padding: 0;
+        cursor: pointer;
+    }
+
+    &__small {
+        height: 48px;
+        padding-left: 32px;
+        padding-right: 22px;
+        border-radius: 40px var(--radius-standard) var(--radius-standard) var(--radius-standard);
+    }
+
+    &__standard {
+        background: var(--color-conv-second-dark);
+
+        &:hover {
+            background: var(--color-conv-second-light);
+        }
+
+        &:active {
+            background: var(--color-conv-second-dark);
+        }
+    }
+
+    &__conversion {
+        background: var(--color-conv-dark);
+
+        &:hover {
+            background: var(--color-conv-light);
+        }
+
+        &:active {
+            background: var(--color-conv-dark);
+        }
+    }
+
+    &_for-input {
+        height: 48px;
+        padding: 0 42px 0 32px;
+        border-radius: var(--radius-standard) 50px var(--radius-standard) var(--radius-standard);
+    
+    }
+
+    &:disabled,
+    &.is-disabled,
+    &[disabled] {
+        pointer-events: none;
+        background: var(--color-disabled);
+    }
+}

@@ -1,0 +1,58 @@
+.nav-button {
+    cursor: pointer;
+
+    svg {
+        transition: .1s linear;
+        width: 32px;
+        height: 9px;
+        fill: var(--color-conv-second-dark);
+    }
+
+
+    &:hover {
+        svg {
+            fill: var(--color-conv-second-light);
+        }
+    }
+
+    &:active {
+        svg {
+            fill: var(--color-conv-second-dark);
+        }
+    }
+
+    &_light {
+        svg {
+            fill: var(--color-white);
+        }
+
+        &:hover {
+            svg {
+                fill: var(--color-neutral-light);
+            }
+        }
+
+        &:active {
+            svg {
+                fill: var(--color-white);
+            }
+        }
+    }
+
+    &_back {
+        svg {
+            transform: scale(-1, 1);
+        }
+    }
+
+    &.swiper-button-disabled,
+    &:disabled,
+    &.is-disabled,
+    &[disabled] {
+        pointer-events: none;
+
+        svg {
+            fill: var(--color-disabled);
+        }
+    }
+}

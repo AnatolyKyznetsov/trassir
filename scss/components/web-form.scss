@@ -1,0 +1,41 @@
+.web-form {
+    &__title {
+        @extend .title__section;
+
+        margin-bottom: 16px;
+    }
+
+    &__description {
+        @extend .text-standard;
+
+        line-height: 1.5;
+        color: var(--color-neutral-middle);
+        margin-bottom: 40px;
+
+        &:empty {
+            display: none;
+        }
+    }
+
+    .button {
+        margin-top: 40px;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: $sm) {
+    .web-form {
+        &__title {
+            margin-bottom: 8px;
+        }
+
+        &__description {
+            font-size: 14px;
+            margin-bottom: 24px;
+        }
+
+        .button {
+            margin-top: 24px;
+        }
+    }
+}

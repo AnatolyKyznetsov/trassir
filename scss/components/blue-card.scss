@@ -1,0 +1,138 @@
+.blue-card {
+    $transition: .18s;
+    $indent: 306px;
+
+    background: var(--color-main-light);
+    border-radius: var(--radius-standard);
+    position: relative;
+    overflow: hidden;
+    display: block;
+
+    &::after {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 100%;
+        transition: $transition linear;
+        background: var(--color-conv-second-dark);
+        position: absolute;
+        top: 100%;
+        pointer-events: none;
+        z-index: 1;
+    }
+
+    &:hover {
+        &::after {
+            top: 0;
+        }
+
+        .blue-card__text {
+            color: transparent;
+            transition: none;
+
+            &::before {
+                color: var(--color-white);
+                transform: translateY(-$indent);
+                transition: $transition linear;
+                font-size: 32px;
+                visibility: visible;
+            }
+
+            &::after {
+                transition: $transition linear;
+                opacity: 0;
+            }
+        }
+
+        .blue-card__more {
+            transform: translateY(0);
+        }
+    }
+
+    &__text {
+        position: relative;
+        z-index: 2;
+        transition: 0s $transition linear;
+        color: var(--color-neutral-darkness);
+        font-size: 24px;
+        font-weight: 600;
+        line-height: 1.33;
+
+        &::before {
+            content: attr(data-text);
+            color: var(--color-neutral-darkness);
+            position: absolute;
+            left: 0;
+            top: 26px;
+            visibility: hidden;
+            transition: $transition linear;
+            padding: 0px 40px;
+        }
+    }
+
+    &__more {
+        position: absolute;
+        bottom: 40px;
+        left: 40px;
+        z-index: 2;
+        font-weight: 500;
+        font-size: 16px;
+        display: inline-flex;
+        color: var(--color-white);
+        pointer-events: none;
+        align-items: center;
+        gap: 8px;
+        transition: $transition linear;
+        line-height: 1.5;
+        transform: translateY($indent);
+
+        svg {
+            margin-bottom: -3px;
+            width: 22px;
+            height: 4px;
+            fill: var(--color-white);
+        }
+    }
+}
+
+@media screen and (max-width: $lg) {
+    .blue-card {
+        &:hover {
+            .blue-card__text {
+                &::before {
+                    font-size: 24px;
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: $md) {
+    .blue-card {
+        $text: 18px;
+        $indent: 222px;
+
+        &__text {
+            font-size: $text;
+
+            &::before {
+                padding: 0 20px;
+            }
+        }
+
+        &:hover {
+            .blue-card__text {
+                &::before {
+                    font-size: $text;
+                    transform: translateY(-$indent);
+                }
+            }
+        }
+
+        &__more {
+            font-size: 14px;
+            left: 16px;
+            bottom: 16px;
+            transform: translateY($indent);
+        }
+    }
+}

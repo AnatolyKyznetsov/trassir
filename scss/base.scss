@@ -1,0 +1,56 @@
+* {
+    box-sizing: border-box;
+}
+
+body, html {
+    overflow-x: hidden;
+    font-family: var(--font-main);
+    margin: 0;
+    padding: 0;
+}
+
+input {
+    font-family: var(--font-second);
+}
+
+ul, ol {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    transition: .1s linear;
+}
+
+svg {
+    transition: .1s linear;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
+
+p {
+    margin: 0;
+}
+
+.custom-select {
+    opacity: 0;
+}
+
+.dni {
+    display: none !important;
+}
+
+.flex {
+    display: flex;
+    gap: 16px;
+    margin-top: 16px;
+
+    &_centered {
+        justify-content: center;
+        align-items: center;
+    }
+}

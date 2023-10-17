@@ -1,0 +1,56 @@
+.burger {
+    display: none;
+    position: relative;
+    width: 32px;
+    height: 32px;
+    align-items: center;
+    justify-content: center;
+
+    svg {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 26px;
+        height: 26px;
+        fill: var(--color-conv-second-dark);
+    }
+
+    &__cross {
+        opacity: 0;
+    }
+
+    &.is-active {
+        .burger__cross {
+            opacity: 1;
+        }
+
+        .burger__icon {
+            opacity: 0;
+        }
+    }
+
+    &:hover {
+        svg {
+            fill: var(--color-conv-second-light);
+        }
+    }
+}
+
+@media screen and (max-width: $lg) { 
+    .burger {
+        display: flex;
+    }
+}
+
+@media screen and (max-width: $sm) { 
+    .burger {
+        height: 28px;
+        width: 28px;
+
+        svg {
+            width: 20px;
+            height: 20px;
+        }
+    }
+}

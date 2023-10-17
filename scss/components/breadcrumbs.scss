@@ -1,0 +1,33 @@
+.breadcrumbs {
+    font-size: 16px;
+    line-height: 1.3;
+    font-family: var(--font-main);
+    margin-bottom: 48px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+
+    &__link {
+        color: var(--color-conv-second-dark);
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        margin-right: 5px;
+
+        &::after {
+            content: '';
+            display: block;
+            width: 16px;
+            height: 16px;
+            background: url('../images/icons/static/breabcrumbs-divider.svg') no-repeat center;
+        }
+
+        &:hover {
+            color: var(--color-conv-second-light);
+        }
+    }
+
+    &__current {
+        color: var(--color-neutral-middle);
+    }
+}

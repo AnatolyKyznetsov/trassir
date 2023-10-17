@@ -1,0 +1,69 @@
+.link {
+    @extend .text-standard;
+
+    color: var(--color-conv-second-dark);
+
+    &:hover {
+        color: var(--color-conv-second-light);
+    }
+
+    &_phone {
+        color: var(--color-conv-second-dark);
+        font-weight: 600;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+
+        svg {
+            stroke: var(--color-conv-second-dark);
+            width: 32px;
+            height: 32px;
+        }
+
+        &:hover {
+            svg {
+                stroke: var(--color-conv-second-light);
+            }
+        }
+
+        &_light {
+            svg {
+                stroke: var(--color-white);
+            }
+    
+            &:hover {
+                svg {
+                    stroke: var(--color-main-light);
+                }
+            }
+        }
+    }
+
+    &_conversion {
+        @extend .text-standard;
+
+        font-weight: 500;
+        color: var(--color-conv-dark);
+        transition: .1s linear;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+
+        svg {
+            transition: .1s linear;
+            fill: var(--color-conv-dark);
+            margin-bottom: -3px;
+            width: 21px;
+            height: 6px;
+        }
+
+        &:hover {
+            color: var(--color-conv-light);
+
+            svg {
+                fill: var(--color-conv-light);
+            }
+        }
+
+    }
+}

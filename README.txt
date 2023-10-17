@@ -1,0 +1,1 @@
+Добавить на кракен шрифт Inter ExtraBold и Medium

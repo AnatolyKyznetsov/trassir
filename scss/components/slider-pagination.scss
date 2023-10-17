@@ -1,0 +1,22 @@
+.slider-pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: unset !important;
+    gap: 8px;
+    height: 100%;
+
+    .swiper-pagination-bullet {
+        $size: 10px;
+
+        background: var(--color-white);
+        margin: 0 !important;
+        width: $size;
+        height: $size;
+        opacity: 0.5;
+
+        &-active {
+            opacity: 1;
+        }
+    }
+}

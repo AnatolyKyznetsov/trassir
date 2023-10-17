@@ -1,0 +1,34 @@
+.input {
+    height: 54px;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    border-radius: var(--radius-standard);
+    background: var(--color-main-light);
+    border: 1px solid var(--color-main-light);
+    outline: none;
+    width: 100%;
+    font-size: 16px;
+    color: var(--color-neutral-darkness);
+    transition: .1s linear;
+
+    &:focus {
+        border-color: var(--color-conv-second-lightness);
+    }
+
+    &.error {
+        color: var(--color-error);
+        border-color: var(--color-error);
+    }
+
+    &__area {
+        @extend .input;
+
+        resize: none;
+        height: 200px;
+    }
+
+    @include placeholder {
+        color: var(--color-neutral-light);
+    }
+}

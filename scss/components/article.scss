@@ -1,0 +1,148 @@
+.app {
+    & > span:not([class]),
+    & > div:not([class]),
+    & > h1:not([class]),
+    & > h2:not([class]),
+    & > h3:not([class]),
+    & > p:not([class]),
+    & > ul:not([class]),
+    & > ol:not([class]),
+    & > table:not([class]),
+    & > img:not([class]),
+    & > a {
+        @extend .container;
+    }
+}
+
+.article {
+    @extend .text-standard;
+}
+
+.app,
+.article {
+    & > h1:not([class]) {
+        @extend .title__main;
+
+        margin-bottom: 24px;
+    }
+
+    & > h2:not([class]) {
+        @extend .title__section;
+
+        margin-bottom: 24px;
+    }
+
+    & > h3:not([class]) {
+        @extend .title__section;
+
+        margin-bottom: 20px;
+    }
+
+    & > p:not([class]) {
+        font-family: inherit;
+        color: inherit;
+        font-weight: inherit;
+        font-size: inherit;
+        line-height: inherit;
+        letter-spacing: inherit;
+
+        &:not(:last-child) {
+            margin-bottom: 16px;
+        }
+    }
+
+    & > ul:not([class]) {
+        list-style: disc inside;
+    }
+
+    & > ol:not([class]) {
+        list-style: decimal inside;
+    }
+
+    & > ol:not([class]),
+    & > ul:not([class]) {
+        font-family: inherit;
+        color: inherit;
+        font-weight: inherit;
+        font-size: inherit;
+        line-height: inherit;
+        letter-spacing: inherit;
+        margin-top: 16px;
+        color: inherit;
+
+        li:not(:last-child) {
+            margin-bottom: 8px;
+        }
+
+        &:not(:last-child) {
+            margin-bottom: 16px;
+        }
+
+        p {
+            display: initial;
+        }
+    }
+
+    & > table:not([class]) {
+        font-family: inherit;
+        color: inherit;
+        font-weight: inherit;
+        font-size: inherit;
+        line-height: inherit;
+        letter-spacing: inherit;
+        max-width: calc(1441px - 32px);
+
+        &:not(:last-child) {
+            margin-bottom: 16px;
+        }
+
+        border-collapse: collapse;
+        border-spacing: 0px;
+        color: inherit;
+
+        tr {
+            border: 1px solid var(--color-neutral-darkness);
+            color: inherit;
+        }
+
+        th {
+            padding: 8px;
+            color: inherit;
+        }
+
+        td {
+            padding: 8px;
+            color: inherit;
+
+            &:not(:last-child) {
+                border-right: 1px solid var(--color-neutral-darkness);
+            }
+        }
+    }
+
+    & > img:not([class]) {
+        display: flex;
+    }
+
+    & > img:not([class]),
+    & > p:not([class]) > img {
+        width: auto;
+        height: auto;
+    }
+
+    & > p:not([class]) > a,
+    & > a:not([class]) {
+        @extend .link;
+
+        color: inherit;
+        font-size: inherit;
+    }
+
+    & > a:not([class]) {
+        display: inline-block;
+
+        &:not(:last-child) {
+            margin-bottom: 16px;
+        }
+    }
+}

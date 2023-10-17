@@ -1,0 +1,42 @@
+.default-slider {
+    &__nav {
+        display: flex;
+        justify-content: center;
+        gap: 22px;
+
+        .nav-button {
+            padding-top: 40px;
+            padding-right: 40px;
+            
+            &_back {
+                padding-left: 40px;
+                padding-right: 0;
+            }
+        }
+    }
+
+    &__slide {
+        height: auto;
+        max-width: calc(33.3% - 16px);
+    }
+}
+
+@media screen and (max-width: $md) {
+    .default-slider {
+        &__slide {
+            max-width: calc(50% - 12px);
+        }
+    }
+}
+
+@media screen and (max-width: $sm) {
+    .default-slider {
+        &__slide {
+            max-width: 100%;
+
+            img {
+                width: 100%;
+            }
+        }
+    }
+}

@@ -1,0 +1,123 @@
+.sales {
+    padding: 100px 0;
+    overflow: hidden;
+
+    &__slider {
+        position: relative;
+    }
+
+    &__slider-tools {
+        left: 0;
+        width: 100%;
+        bottom: 0;
+        z-index: 2;
+        position: absolute;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        height: 64px;
+        transition: .2s linear;
+        z-index: 1;
+
+        .nav-button {
+            height: 100%;
+            padding: 0 63px;
+            display: flex;
+            align-items: center;
+            justify-content: start;
+        }
+
+        &:hover {
+            background: #{HexToRGBA($color-main-light, 0.1)};
+        }
+    }
+
+    &__slide {
+        display: block;
+        background: url('../images/sale/bg.png') no-repeat center, linear-gradient(90.05deg, #1201d3 39.84%, #661677);
+        padding: 55px 55px 83px;
+        position: relative;
+        border-radius: var(--radius-standard);
+
+    }
+
+    &__slide-title {
+        @extend .title__block;
+        @extend .title__block_light;
+
+        max-width: 620px;
+        position: relative;
+        z-index: 2;
+    }
+
+    &__slide-text {
+        @extend .text-large;
+
+        color: var(--color-white);
+        max-width: 620px;
+        margin-bottom: 40px;
+        position: relative;
+        z-index: 2;
+    }
+
+    &__slide-img {
+        position: absolute;
+        top: 0;
+        right: 0;
+        max-height: 100%;
+        z-index: 2;
+    }
+
+    .button {
+        position: relative;
+        z-index: 2;
+    }
+}
+
+@media screen and (max-width: 1210px) {
+    .sales {
+        &__slide-img {
+            opacity: 0.5;
+        }
+    }
+}
+
+@media screen and (max-width: $md) {
+    .sales {
+        padding: 40px 0;
+
+        &__slide {
+            padding: 20px;
+            padding-bottom: 80px;
+            background: url('../images/sale/bg.png') no-repeat right bottom, linear-gradient(90.05deg, #1201d3 39.84%, #661677);
+        }
+
+        &__slide-img {
+            display: none;
+        }
+
+        &__slide-text {
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+    }
+}
+
+@media screen and (max-width: $sm) {
+    .sales {
+        &__slide-title {
+            font-size: 24px;
+            margin-bottom: 9px;
+        }
+
+        &__slide-text {
+            font-size: 14px;
+            line-height: 1.4;
+        }
+
+        &__button {
+            max-width: 100%;
+            width: 100%;
+        }
+    }
+}

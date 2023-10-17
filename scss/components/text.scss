@@ -1,0 +1,24 @@
+.text {
+    font-family: var(--font-main);
+    color: var(--color-neutral-darkness);
+    line-height: 1.5;
+}
+
+.text-small {
+    @extend .text;
+
+    font-size: 14px;
+}
+
+.text-standard {
+    @extend .text;
+
+    font-size: 16px;
+}
+
+.text-large {
+    @extend .text;
+
+    font-size: 20px;
+    font-weight: 500;
+}

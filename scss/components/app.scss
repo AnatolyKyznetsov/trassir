@@ -1,0 +1,15 @@
+.app {
+    &__head {
+        padding: 40px 0;
+    }
+
+    &__title {
+        @extend .title__main;
+    }
+
+    &__description {
+        @extend .text-large;
+
+        margin-top: 24px;
+    }
+}

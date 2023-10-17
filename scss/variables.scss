@@ -1,0 +1,67 @@
+@function HexToRGBA($hex, $alpha) { // #{HexToRGBA($color-neutral-dark, 0.3)}
+    @return rgba(red($hex), green($hex), blue($hex), $alpha);
+}
+
+// Colors
+$color-white: #FFFFFF;
+
+$color-main-light: #EBEEF5;
+$color-main-middle: #DAE0EB;
+$color-main-dark: #AAA6B9;
+$color-main-darkness: $color-main-dark;
+
+$color-conv-light: #FF4747;
+$color-conv-dark: #D12C1E;
+
+$color-conv-second-lightness: #6C8CFF;
+$color-conv-second-light: #0F00E2;
+$color-conv-second-dark: #000B7C;
+
+$color-neutral-light: #C1BFDF;
+$color-neutral-middle: #737B8A;
+$color-neutral-darkness: #232323;
+
+$color-disabled: #D3DEE8;
+$color-warning: #FF4D3C;
+$color-error: #FF0003;
+
+// Media
+$xxl: 1900px;
+$xl: 1790px;
+$lg: 1380px;
+$md: 992px;
+$sm: 576px;
+
+:root {
+    // Fonts
+    --font-main: "Inter", sans-serif;
+    --font-second: "Inter", sans-serif;
+
+    --font-weight-standard: 400;
+
+    // Colors
+    --color-white: #FFFFFF;
+
+    --color-main-light: #EBEEF5;
+    --color-main-middle: #C7CEDB;
+    --color-main-dark: #AAA6B9;
+    --color-main-darkness: #AAA6B9;
+    
+    --color-conv-light: #FF4747;
+    --color-conv-dark: #D12C1E;
+    
+    --color-conv-second-lightness: #6C8CFF;
+    --color-conv-second-light: #0F00E2;
+    --color-conv-second-dark: #000B7C;
+    
+    --color-neutral-light: #C1BFDF;
+    --color-neutral-middle: #737B8A;
+    --color-neutral-darkness: #1C212D;
+    
+    --color-disabled: #D3DEE8;
+    --color-warning: #FF4D3C;
+    --color-error: #FF0003;
+
+    // Borer radius
+    --radius-standard: 4px;
+}
