@@ -1,5 +1,6 @@
 import { resolve } from 'path';
 import handlebars from 'vite-plugin-handlebars';
+import { viteStaticCopy } from 'vite-plugin-static-copy'
 
 export default {
     build: {
@@ -17,5 +18,20 @@ export default {
                 resolve(__dirname, 'components'),
             ]
         }),
+        viteStaticCopy({
+            targets: [
+                {
+                    src: [ 
+                        './local/js',
+                        './local/images'
+                    ],
+                    dest: './local/',
+                },
+                {
+                    src: [ './script.js' ],
+                    dest: './',
+                },
+            ]
+        })
     ],
 };
