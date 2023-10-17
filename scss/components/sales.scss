@@ -1,6 +1,5 @@
 .sales {
     padding: 100px 0;
-    overflow: hidden;
 
     &__slider {
         position: relative;
@@ -38,7 +37,6 @@
         padding: 55px 55px 83px;
         position: relative;
         border-radius: var(--radius-standard);
-
     }
 
     &__slide-title {

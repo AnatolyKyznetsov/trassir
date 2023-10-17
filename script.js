@@ -59,7 +59,6 @@ document.addEventListener('DOMContentLoaded', () => {
         new Swiper('.js-salesSlider', {
             slidesPerView: 1,
             spaceBetween: 0,
-            effect: 'cube',
             loop: true,
             autoplay: {
                 delay: 3000,
@@ -79,7 +78,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 invert: false,
                 thresholdDelta: 25,
             },
-          });
+        });
     }
 
     const initDefaultSliders = () => {
@@ -144,7 +143,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         const serchBtn = document.querySelector('.js-headerSearchMob');
-        const header = document.querySelector('.js-header'); ;
+        // const header = document.querySelector('.js-header');
 
         const cloneElems = () => {
             const elemsClassNames = [
@@ -178,10 +177,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 needClone = cloneElems();
             }
 
-            const headerHeight = header ? header.offsetHeight : 0;
+            // const headerHeight = header ? header.offsetHeight : 0;
 
-            menu.style.top = `${headerHeight}px`;
-            menu.style.height = `calc(100vh - ${headerHeight}px)`;
+            // menu.style.top = `${headerHeight}px`;
+            // menu.style.height = `calc(100vh - ${headerHeight}px)`;
             menu.classList.toggle('is-active');
             button.classList.toggle('is-active');
             disableScroll(!menu.classList.contains('is-active'), [ menu ]);
