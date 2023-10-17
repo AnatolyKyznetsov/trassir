@@ -61,11 +61,11 @@ document.addEventListener('DOMContentLoaded', () => {
             spaceBetween: 0,
             effect: 'cube',
             loop: true,
-            // autoplay: {
-            //     delay: 3000,
-            //     disableOnInteraction: false,
-            //     pauseOnMouseEnter: true,
-            // },
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false,
+                pauseOnMouseEnter: true,
+            },
             pagination: {
                 el: '.js-salesSliderPagination',
                 clickable: true,
@@ -145,7 +145,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const serchBtn = document.querySelector('.js-headerSearchMob');
         const header = document.querySelector('.js-header'); ;
-        const headerHeight = header ? header.offsetHeight : 0;
 
         const cloneElems = () => {
             const elemsClassNames = [
@@ -178,6 +177,8 @@ document.addEventListener('DOMContentLoaded', () => {
             if (needClone) {
                 needClone = cloneElems();
             }
+
+            const headerHeight = header ? header.offsetHeight : 0;
 
             menu.style.top = `${headerHeight}px`;
             menu.style.height = `calc(100vh - ${headerHeight}px)`;
