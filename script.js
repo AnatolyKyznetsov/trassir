@@ -58,7 +58,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const initSalesSlider = () => {
         new Swiper('.js-salesSlider', {
             slidesPerView: 1,
-            spaceBetween: 0,
+            spaceBetween: 20,
             loop: true,
             autoplay: {
                 delay: 3000,
