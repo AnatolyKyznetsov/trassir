@@ -118,8 +118,6 @@
     }
 
     &__menu-mob {
-        $header-height: 68px;
-
         display: none;
         transform: translateX(-100%);
         overflow: auto;
@@ -131,9 +129,7 @@
         z-index: 15;
         pointer-events: none;
         transition: transform .1s linear;
-        padding: 16px 16px 48px;
-        top: $header-height;
-        max-height: calc(100vh - $header-height);
+        padding: 16px 16px 80px;
 
         &.is-active {
             pointer-events: auto;
@@ -288,13 +284,6 @@
 @media screen and (max-width: $sm) {
     .header {
         padding: 13px 0;
-
-        &__menu_mob {
-            $header-height: 54px;
-
-            top: $header-height;
-            max-height: calc(100vh - $header-height);
-        }
 
         &__logo {
             height: 28px;

@@ -3,6 +3,7 @@
 
     &__slider {
         position: relative;
+        border-radius: var(--radius-standard);
     }
 
     &__slider-tools {
@@ -36,7 +37,6 @@
         background: url('../images/sale/bg.png') no-repeat center, linear-gradient(90.05deg, #1201d3 39.84%, #661677);
         padding: 55px 55px 83px;
         position: relative;
-        border-radius: var(--radius-standard);
     }
 
     &__slide-title {
