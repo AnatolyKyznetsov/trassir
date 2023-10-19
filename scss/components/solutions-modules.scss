@@ -16,9 +16,11 @@
         min-height: 564px;
         width: 100%;
 
-        .simplebar-content {
-            margin: 20px 0;
+        .simplebar-offset {
+            padding: 20px 0;
+        }
 
+        .simplebar-content {
             @extend .solutions-modules__inner;
         }
     }
@@ -41,6 +43,7 @@
         font-size: 16px;
         line-height: 1.5;
         border-radius: var(--radius-standard);
+        max-width: calc(50% - 12px);
 
         &:hover {
             background: var(--color-main-light);
@@ -62,6 +65,14 @@
     }
 }
 
+@media screen and (max-width: 1180px) {
+    .solutions-modules {
+        &__item {
+            max-width: 100%;
+        }
+    }
+}
+
 @media screen and (max-width: $md) {
     .solutions-modules {
         padding-bottom: 40px;
@@ -78,8 +89,8 @@
             min-height: unset;
             background: var(--color-white);
 
-            .simplebar-content {
-                margin: 0;
+            .simplebar-offset {
+                padding: 0;
             }
         }
 
