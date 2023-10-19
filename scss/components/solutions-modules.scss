@@ -1,0 +1,111 @@
+.solutions-modules {
+    &__wrapper {
+        display: flex;
+        align-items: flex-start;
+        border-radius: var(--radius-standard);
+        background: var(--color-white);
+        overflow: hidden;
+    }
+
+    &__inner {
+        padding: 40px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        flex-direction: column;
+        max-height: 584px;
+        min-height: 584px;
+        width: 100%;
+
+        .simplebar-content {
+            @extend .solutions-modules__inner;
+        }
+    }
+
+    &__img {
+        flex-shrink: 0;
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+    } 
+
+    &__item {
+        padding: 16px 20px;
+        max-width: 360px;
+        color: var(--color-neutral-middle);
+        font-size: 16px;
+        line-height: 1.5;
+        border-radius: var(--radius-standard);
+
+        &:hover {
+            background: var(--color-main-light);
+
+            .solutions-modules__item-title {
+                color: var(--color-conv-second-dark);
+            }
+        }
+    }
+
+    &__item-title {
+        transition: .1s linear;
+        display: block;
+        color: var(--color-neutral-darkness);
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 1.44;
+        margin-bottom: 8px;     
+    }
+}
+
+@media screen and (max-width: $md) {
+    .solutions-modules {
+        padding-bottom: 40px;
+
+        &__img {
+            display: none;
+        }
+
+        &__inner {
+            padding: 24px;
+            justify-content: space-between;
+            flex-direction: row;
+            max-height: unset;
+            min-height: unset;
+        }
+
+        &__item {
+            max-width: calc(50% - 12px);
+            margin: 0 auto;
+        }
+    }
+}
+
+@media screen and (max-width: $sm) {
+    .solutions-modules {
+
+        &__img {
+            display: block;
+            max-height: 313px;
+            overflow: hidden;
+        }
+
+        &__inner {
+            flex-direction: column;
+            padding: 0;
+            gap: 0;
+        }
+
+        &__wrapper {
+            flex-direction: column;
+            margin-right: -16px;
+            margin-left: -16px;
+        }
+
+        &__item {
+            max-width: 100%;
+            margin: 0;
+        }
+    }
+}

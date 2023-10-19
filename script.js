@@ -243,6 +243,41 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    const initTabs = () => {
+        const tabs = document.querySelectorAll('.js-tabs');
+
+        const toggleActive = (elems, target) => {
+            elems.forEach((elem, index) => {
+                elem.classList.remove('is-active');
+
+                if (index === target) {
+                    elem.classList.add('is-active');
+                }
+            });
+        }
+
+        tabs.forEach((item, itemIndex) => {
+            const btns = item.querySelectorAll('.js-tabsTab');
+            const contents = item.querySelectorAll('.js-tabsContent');
+            const contentsMob = item.querySelectorAll('.js-tabsContentMob');
+
+            if (itemIndex === 0) {
+                contentsMob[0].innerHTML = contents[0].innerHTML;
+            }
+
+            btns.forEach((btn, index) => {
+                btn.addEventListener('click', () => {
+                    contentsMob[index].innerHTML = contents[index].innerHTML;
+                    
+                    toggleActive(btns, index);
+                    toggleActive(contents, index);               
+                    toggleActive(contentsMob, index);
+                });
+            });
+        });
+    }
+
+    initTabs();
     initModals();
     footerNavMobInit();
     burgerMenuInit();

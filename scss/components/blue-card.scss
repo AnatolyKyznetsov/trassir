@@ -8,6 +8,20 @@
     overflow: hidden;
     display: block;
 
+    &_see-more {
+        .blue-card__more {
+            margin-top: 18px;
+            position: static;
+            transform: translateY(0) !important;
+            color: var(--color-conv-second-dark);
+
+            svg {
+                fill: var(--color-conv-second-dark);
+            }
+    
+        }
+    }
+
     &::after {
         content: '';
         display: block;
@@ -46,6 +60,11 @@
 
         .blue-card__more {
             transform: translateY(0);
+            color: var(--color-white);
+
+            svg {
+                fill: var(--color-white);
+            }
         }
     }
 
@@ -63,10 +82,9 @@
             color: var(--color-neutral-darkness);
             position: absolute;
             left: 0;
-            top: 26px;
+            top: 0;
             visibility: hidden;
             transition: $transition linear;
-            padding: 0px 40px;
         }
     }
 
@@ -113,10 +131,6 @@
 
         &__text {
             font-size: $text;
-
-            &::before {
-                padding: 0 20px;
-            }
         }
 
         &:hover {

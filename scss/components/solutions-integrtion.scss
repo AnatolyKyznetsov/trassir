@@ -1,0 +1,100 @@
+.solutions-integrtion {
+    &__wrapper {
+        display: flex;
+        gap: 24px;
+    }
+    
+    &__card {
+        padding: 24px;
+        max-width: 335px;
+        background: var(--color-white);
+        border-radius: var(--radius-standard);
+        min-height: 332px;
+    }
+
+    &__card-title {
+        color: var(--color-neutral-darkness);
+        font-size: 20px;
+        font-weight: 500;
+        margin-bottom: 16px;
+        line-height: 1.5;
+    }
+
+    &__card-item {
+        color: var(--color-neutral-middle);
+        font-size: 16px;
+        position: relative;
+        line-height: 1.5;
+
+        &:not(:last-child) {
+            margin-bottom: 16px;
+        }
+
+        &::before {
+            content: '';
+            display: block;
+            width: 4px;
+            height: 20px;
+            border-radius: 0px var(--radius-standard) var(--radius-standard) 0px;
+            background: var(--color-conv-dark);
+            position: absolute;
+            top: 0;
+            left: -24px;
+        }
+    }
+
+    &__notice {
+        color: var(--color-conv-second-dark);
+        border-top: 1px solid var(--color-conv-second-dark);
+        border-bottom: 1px solid var(--color-conv-second-dark);
+        padding: 32px;
+        margin-top: 32px;
+        text-align: center;
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 1.5; 
+    }
+}
+
+@media screen and (max-width: $lg) {
+    .solutions-integrtion {
+        &__wrapper {
+            flex-wrap: wrap;
+        }
+
+        &__card {
+            max-width: calc(50% - 12px);
+            width: 100%;
+            min-height: auto;
+        }
+    }
+}
+
+@media screen and (max-width: $md) {
+    .solutions-integrtion {
+        padding-bottom: 40px;
+
+        &__card-title {
+            font-size: 18px;
+        }
+
+        &__notice {
+            font-size: 16px;
+            padding: 16px 0;
+            margin-top: 24px;
+        }
+    }
+}
+
+@media screen and (max-width: $sm) {
+    .solutions-integrtion {
+        &__wrapper {
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        &__card {
+            max-width: 100%;
+        }
+    }
+}

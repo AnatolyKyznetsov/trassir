@@ -1,0 +1,81 @@
+.solutions-opportunity {
+    padding: 100px 0 60px;
+    background: url('../images/solutions-opportunity.png') no-repeat center / auto 100% fixed, linear-gradient(84deg, #010C81 0%, #0116B6 100%);
+
+    &__title {
+        color: var(--color-white);
+        margin-bottom: 34px;
+    }
+
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        gap: 24px;
+    }
+
+    &__card {
+        display: flex;
+        padding: 32px;
+        flex-direction: column;
+        gap: 20px;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        color: var(--color-white);
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 1.5; 
+        width: 454px;
+        height: 280px;
+        background: var(--color-conv-second-dark);
+        border-radius: var(--radius-stadard);
+    }
+
+    &__buttons {
+        display: flex;
+        justify-content: flex-end;
+        margin-top: 32px;
+
+        .button {
+            width: 283px;
+        }
+    }
+}
+
+@media screen and (max-width: $md) {
+    .solutions-opportunity {
+        padding: 40px 0;
+
+        &__wrapper {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        &__card {
+            font-size: 16px;
+            height: 184px;
+            max-width: 343px;
+        }
+
+        &__icon {
+            height: 54px;
+            width: 54px;
+        }
+    }
+}
+
+@media screen and (max-width: $sm) {
+    .solutions-opportunity {
+        &__wrapper {
+            gap: 12px;
+        }
+
+        &__buttons {
+            margin-top: 20px;
+
+            .button {
+                width: 100%;
+            }
+        }
+    }
+}

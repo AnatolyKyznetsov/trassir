@@ -59,3 +59,112 @@
         margin: 110px 0 24px;
     }
 }
+
+@media screen and (max-width: $lg) {
+    .solutions-hero {
+        position: relative;
+        overflow: hidden;
+
+        .container {
+            gap: 40px;
+        }
+
+        &__content {
+            max-width: 100%;
+        }
+
+        &__title {
+            max-width: 70%;
+            position: relative;
+            z-index: 2;
+        }
+
+        &__img {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            opacity: 0.3;
+
+            img {
+                height: auto;
+            }
+        }
+
+        &__list,
+        .hero__benefits {
+            position: relative;
+            z-index: 2;
+        }
+    }
+}
+
+@media screen and (max-width: $md) {
+    .solutions-hero {
+        .container {
+            flex-direction: column-reverse;
+        }
+
+        &__content {
+            padding: 60px 0;
+        }
+
+        &__title {
+            max-width: 100%;
+        }
+
+        &__img {
+            display: none;
+        }
+
+        .hero__benefits {
+            margin-top: 40px;
+            margin-bottom: 0;
+        }
+    }
+}
+
+@media screen and (max-width: $sm) {
+    .solutions-hero {
+        .container {
+            gap: 0;
+        }
+
+        &__img {
+            display: flex;
+            align-items: flex-end;
+            position: static;
+            opacity: 1;
+            margin-right: -16px;
+            margin-left: -16px;
+            overflow: hidden;
+            max-height: 220px;
+
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+
+        &__content {
+            padding: 32px 0;
+        }
+
+        .hero__benefits {
+            flex-direction: column;
+            
+            &-item {
+                margin: 0;
+                max-width: 80%;
+
+                &:last-child {
+                    display: block;
+                    max-width: 80%;
+
+                    &::before {
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+}

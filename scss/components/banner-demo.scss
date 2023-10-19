@@ -49,6 +49,10 @@
 
 @media screen and (max-width: $lg) {
     .banner-demo {
+        &::after {
+            width: calc(100% - 250px);
+        }
+
         .container {
             padding-top: 46px;
             padding-bottom: 46px;
