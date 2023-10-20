@@ -9,7 +9,7 @@ export default {
                 main: resolve(__dirname, 'index.html'),
                 text: resolve(__dirname, 'text.html'),
                 solutions: resolve(__dirname, 'solutions.html'),
-                solutions: resolve(__dirname, 'partner.html'),
+                partner: resolve(__dirname, 'partner.html'),
             },
         },
     },

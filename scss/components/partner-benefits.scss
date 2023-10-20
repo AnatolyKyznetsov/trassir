@@ -39,6 +39,7 @@
     &__content {
         display: none;
         align-items: flex-start;
+        justify-content: space-between;
         gap: 26px;
 
         &_mob {
