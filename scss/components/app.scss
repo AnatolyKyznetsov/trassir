@@ -13,3 +13,15 @@
         margin-top: 24px;
     }
 }
+
+@media screen and (max-width: $sm) {
+    .app {
+        &__head {
+            padding-top: 0;
+        }
+
+        &__description {
+            margin-top: 18px;
+        }
+    }
+}

@@ -1,4 +1,4 @@
-.solutions-hero {
+.inner-hero {
     background: linear-gradient(90deg, #000B7C 0%, #001ACA 64.58%);
 
     .container {
@@ -18,15 +18,28 @@
     }
 
     &__content {
-        padding: 111px 0 82px;
+        padding: 48px 0 82px;
         max-width: 743px;
         width: 100%;
         color: var(--color-white);
         flex-shrink: 0;
+
+        &_centered {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
     }
 
     &__title {
         color: inherit;
+    }
+
+    &__subtitle {
+        margin-top: 14px;
+        color: var(--color-main-middle);
+        font-size: 24px;
+        line-height: 1.5;
     }
 
     &__list {
@@ -58,10 +71,18 @@
     .hero__benefits {
         margin: 110px 0 24px;
     }
+
+    &__button {
+        margin-top: 40px;
+
+        & + .hero__benefits {
+            margin: 90px 0 8px;
+        }
+    }
 }
 
 @media screen and (max-width: $lg) {
-    .solutions-hero {
+    .inner-hero {
         position: relative;
         overflow: hidden;
 
@@ -73,67 +94,58 @@
             max-width: 100%;
         }
 
+        &__subtitle,
         &__title {
-            max-width: 70%;
-            position: relative;
-            z-index: 2;
+            max-width: 990px;
         }
-
+        
         &__img {
-            position: absolute;
-            bottom: 0;
-            right: 0;
-            opacity: 0.3;
-
-            img {
-                height: auto;
-            }
-        }
-
-        &__list,
-        .hero__benefits {
-            position: relative;
-            z-index: 2;
+            display: none;
         }
     }
 }
 
 @media screen and (max-width: $md) {
-    .solutions-hero {
+    .inner-hero {
         .container {
             flex-direction: column-reverse;
         }
 
         &__content {
-            padding: 60px 0;
+            padding: 40px 0 60px;
         }
 
-        &__title {
-            max-width: 100%;
+        &__subtitle {
+            font-size: 16px;
         }
 
-        &__img {
-            display: none;
+        &__button {
+            margin-top: 24px;
         }
 
         .hero__benefits {
             margin-top: 40px;
             margin-bottom: 0;
         }
+
+        .breadcrumbs {
+            margin-bottom: 32px;
+        }
     }
 }
 
 @media screen and (max-width: $sm) {
-    .solutions-hero {
+    .inner-hero {
+        margin-top: 48px;
+        position: relative;
+        overflow: visible;
+
         .container {
             gap: 0;
         }
 
         &__img {
             display: flex;
-            align-items: flex-end;
-            position: static;
-            opacity: 1;
             margin-right: -16px;
             margin-left: -16px;
             overflow: hidden;
@@ -165,6 +177,13 @@
                     }
                 }
             }
+        }
+
+        .breadcrumbs {
+            margin-bottom: 0;
+            position: absolute;
+            left: 16px;
+            top: -48px;
         }
     }
 }

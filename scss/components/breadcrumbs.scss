@@ -6,6 +6,7 @@
     display: flex;
     align-items: center;
     flex-wrap: wrap;
+    gap: 4px 0;
 
     &__link {
         color: var(--color-conv-second-dark);
@@ -19,7 +20,9 @@
             display: block;
             width: 16px;
             height: 16px;
-            background: url('../images/icons/static/breabcrumbs-divider.svg') no-repeat center;
+            background-image: url('../images/icons/static/breabcrumbs-divider.svg');
+            background-repeat: no-repeat;
+            background-position: center;
         }
 
         &:hover {
@@ -29,5 +32,62 @@
 
     &__current {
         color: var(--color-neutral-middle);
+    }
+
+    &_light {
+        .breadcrumbs__link {
+            color: var(--color-main-middle);
+
+            &::after {
+                background-image: url('../images/icons/static/breabcrumbs-divider-light.svg');
+            }
+
+            &:hover {
+                color: var(--color-white);
+            }
+        }
+
+        .breadcrumbs__current {
+            color: var(--color-white);
+        }
+    }
+}
+
+@mixin modLink {
+    flex-direction: row-reverse;
+    color: var(--color-neutral-middle);
+
+    &:not(:last-of-type) {
+        display: none;
+    }
+
+    &::after {
+        background-image: url('../images/icons/static/breabcrumbs-divider-middle.svg');
+        transform: scale(-1);
+    }
+
+    &:hover {
+        color: var(--color-neutral-middle);
+    }
+}
+
+@media screen and (max-width: $sm) {
+    .breadcrumbs {
+        height: 48px;
+        margin-bottom: 0;
+
+        &__link {
+            @include modLink();
+        }
+
+        &_light {
+            .breadcrumbs__link {
+                @include modLink();
+            }
+        }
+
+        &__current {
+            display: none;
+        }
     }
 }

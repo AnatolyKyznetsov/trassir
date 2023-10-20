@@ -267,7 +267,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
             btns.forEach((btn, index) => {
                 btn.addEventListener('click', () => {
-                    contentsMob[index].innerHTML = contents[index].innerHTML;
+                    if (contentsMob[index] && contents[index]) {
+                        contentsMob[index].innerHTML = contents[index].innerHTML;
+                    }
                     
                     toggleActive(btns, index);
                     toggleActive(contents, index);               

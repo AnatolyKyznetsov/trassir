@@ -1,0 +1,33 @@
+.list {
+    &__item {
+        color: var(--color-neutral-darkness);
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 1.44;
+        display: flex;
+        align-items: flex-start;
+
+        &::before {
+            content: '';
+            flex-shrink: 0;
+            width: 5px;
+            height: 5px;
+            border-radius: 100%;
+            margin-right: 10px;
+            margin-top: 10px;
+            background: var(--color-conv-dark);
+        }
+
+        &:not(:last-child) {
+            margin-bottom: 10px;
+        }
+    }
+}
+
+@media screen and (max-width: $md) {
+    .list {
+        &__item {
+            font-size: 16px;
+        }
+    }
+}

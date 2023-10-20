@@ -1,0 +1,104 @@
+.become-partner {
+    padding-bottom: 100px;
+
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__card {
+        max-width: 330px;
+        color: var(--color-neutral-darkness);
+        font-size: 18px;
+        line-height: 1.44;
+        position: relative;
+
+        &:not(:last-child) {
+            &::after {
+                content: '';
+                display: block;
+                max-width: 185px;
+                width: 100%;
+                height: 12px;
+                position: absolute;
+                left: calc(100% - 40px);
+                top: 70px;
+                background: url('../images/icons/static/arrow-large.svg') no-repeat center;
+            }
+        }
+    }
+
+    &__img {
+        margin-bottom: 52px;
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+    }
+}
+
+@media screen and (max-width: $lg) {
+    .become-partner {
+        &__card {
+            &:not(:last-child) {
+                &::after {
+                    left: calc(100% - 140px);
+                    top: 180px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: $md) {
+    .become-partner {
+        padding-bottom: 40px;
+
+        &__wrapper {
+            flex-direction: column;
+        }
+
+        &__card {
+            display: flex;
+            max-width: 100%;
+            align-items: center;
+            gap: 36px;
+
+            &:not(:last-child) {
+                margin-bottom: 58px;
+
+                &::after {
+                    background: url('../images/icons/static/arrow-large-vertical.svg') no-repeat center;
+                    height: 55px;
+                    width: 12px;
+                    top: 100%;
+                    left: 140px;
+                }
+            }
+
+            &:not(:first-child) {
+                .become-partner__img {
+                    max-width: 90px;
+                    margin-left: 32px;
+                }
+            }
+        }
+
+        &__img {
+            margin-bottom: 0;
+            max-width: 122px;
+            display: flex;
+            align-items: flex-end;
+            flex-shrink: 0;
+        }
+    }
+}
+
+@media screen and (max-width: $sm) {
+    .become-partner {
+        &__card {
+            font-size: 14px;
+        }
+    }
+}

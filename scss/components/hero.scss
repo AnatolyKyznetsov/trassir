@@ -40,6 +40,12 @@
         display: flex;
         justify-content: space-between;
         gap: 24px;
+
+        &_long {
+            .hero__benefits-item {
+                max-width: 330px;
+            }
+        }
     }
 
     &__benefits-item {

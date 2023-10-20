@@ -16,7 +16,10 @@
 
     &__img {
         width: 100%;
-        background: url('../images/feedback.png') no-repeat top right / cover;
+        background-image: url('../images/feedback.png');
+        background-repeat: no-repeat;
+        background-position: top right;
+        background-size: cover;
         overflow: hidden;
         border-radius: var(--radius-standard) 0 0 var(--radius-standard);
     }

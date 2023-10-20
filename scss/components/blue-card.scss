@@ -2,6 +2,14 @@
     $transition: .18s;
     $indent: 306px;
 
+    @mixin smallText {
+        color: var(--color-neutral-middle);
+        font-size: 16px;
+        line-height: 1.5;
+        font-weight: 400;
+        margin-bottom: 8px; 
+    }
+
     background: var(--color-main-light);
     border-radius: var(--radius-standard);
     position: relative;
@@ -56,6 +64,14 @@
                 transition: $transition linear;
                 opacity: 0;
             }
+
+            &_small {
+                &::before {
+                    @include smallText();
+
+                    color: var(--color-neutral-light);
+                }
+            }
         }
 
         .blue-card__more {
@@ -85,6 +101,10 @@
             top: 0;
             visibility: hidden;
             transition: $transition linear;
+        }
+
+        &_small {
+            @include smallText();
         }
     }
 

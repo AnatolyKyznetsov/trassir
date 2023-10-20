@@ -1,0 +1,25 @@
+.geo {
+    height: 836px;
+    background: url('../images/map.png') no-repeat top center / contain;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    margin: 100px 0 50px;
+
+    .hero__benefits {
+        color: var(--color-conv-second-dark);
+    }
+}
+
+@media screen and (max-width: $lg) {
+    .geo {
+        height: 578px;
+        margin: 50px 0;
+    }
+}
+
+@media screen and (max-width: $sm) {
+    .geo {
+        height: 460px;
+    }
+}

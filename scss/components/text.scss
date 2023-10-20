@@ -22,3 +22,9 @@
     font-size: 20px;
     font-weight: 500;
 }
+
+@media screen and (max-width: $sm) {
+    .text-large {
+        font-size: 18px;
+    }
+}

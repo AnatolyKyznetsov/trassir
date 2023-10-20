@@ -1,0 +1,134 @@
+.partner-benefits {
+    &__tabs {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: 24px;
+        margin-bottom: 50px;
+    }
+
+    &__tab {
+        min-height: 114px;
+        max-width: 333px;
+        width: 100%;
+        background: var(--color-white);
+        padding: 16px 32px;
+        color: var(--color-conv-second-dark);
+        font-size: 18px;
+        line-height: 1.44;
+        cursor: pointer;
+        border: 2px solid var(--color-white);
+        transition: .1s linear;
+        border-radius: var(--radius-standard);
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+
+        &:hover {
+            border-color: var(--color-conv-second-dark);
+        }
+
+        &.is-active {
+            border-color: var(--color-conv-second-dark);
+            background: var(--color-conv-second-dark);
+            color: var(--color-white);
+        }
+    }
+
+    &__content {
+        display: none;
+        align-items: flex-start;
+        gap: 26px;
+
+        &_mob {
+            display: none;
+            flex-direction: column-reverse;
+            gap: 32px;
+
+            &.is-active {
+                display: none;
+            }
+        }
+
+        &.is-active {
+            display: flex;
+        }
+    }
+
+    &__inner {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    &__img {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        flex-shrink: 0;
+        border-radius: 200px var(--radius-standard) var(--radius-standard) var(--radius-standard);
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+    }
+}
+
+@media screen and (max-width: $lg) {
+    .partner-benefits {
+        &__tab {
+            max-width: calc(50% - 12px);
+        }
+    }
+}
+
+@media screen and (max-width: $md) {
+    .partner-benefits {
+        padding-bottom: 40px;
+
+        &__tabs {
+            gap: 8px;
+            margin-bottom: 0;
+        }
+
+        &__tab {
+            max-width: 100%;
+            padding: 24px 32px;
+            font-size: 14px;
+            min-height: 68px;
+        }
+
+        &__inner {
+            margin-bottom: 40px;
+        }
+
+        &__content {
+            &_mob {
+                &.is-active {
+                    display: flex;
+                }
+            }
+
+            &.is-active {
+                display: none;
+            }
+        }
+        
+        &__img {
+            border-radius: 0;
+            margin: 0 auto;
+        }
+    }
+}
+
+@media screen and (max-width: $sm) {
+    .partner-benefits {
+        &__img {
+            margin-right: -16px;
+            margin-left: -16px;
+        }
+    }
+}
