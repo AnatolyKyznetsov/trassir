@@ -6,15 +6,12 @@ export default {
     build: {
         rollupOptions: {
             input: {
-                main: resolve(__dirname, 'pages/index.html'),
-                text: resolve(__dirname, 'pages/text.html'),
-                solutions: resolve(__dirname, 'pages/solutions.html'),
-                partner: resolve(__dirname, 'pages/partner.html'),
-                clients: resolve(__dirname, 'pages/clients.html'),
+                main: resolve(__dirname, 'index.html'),
+                text: resolve(__dirname, 'text.html'),
+                solutions: resolve(__dirname, 'solutions.html'),
+                partner: resolve(__dirname, 'partner.html'),
+                clients: resolve(__dirname, 'clients.html'),
             },
-            // output: {
-                // dir: 'dist'
-            // }
         },
     },
     plugins: [
