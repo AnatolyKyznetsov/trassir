@@ -83,10 +83,7 @@
         &__benefits {
             gap: 48px 24px;
             flex-wrap: wrap;
-        }
-
-        &__benefits-item {
-            margin: 0 auto;
+            justify-content: center;
         }
     }
 }
@@ -168,7 +165,6 @@
 
         &__benefits {
             gap: 12px;
-            justify-content: space-between;
         }
 
         &__benefits-item {

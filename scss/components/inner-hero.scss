@@ -6,6 +6,10 @@
         gap: 90px;
     }
 
+    .breadcrumbs {
+        @extend .breadcrumbs_light;
+    }
+
     &__img {
         display: flex;
         align-items: center;
@@ -70,6 +74,12 @@
 
     .hero__benefits {
         margin: 110px 0 24px;
+        justify-content: flex-start;
+        gap: 48px;
+
+        &-item {
+            max-width: 330px;
+        }
     }
 
     &__button {
@@ -101,6 +111,10 @@
         
         &__img {
             display: none;
+        }
+
+        .hero__benefits {
+            justify-content: flex-start;
         }
     }
 }
