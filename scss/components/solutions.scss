@@ -1,4 +1,6 @@
 .solutions {
+    padding-bottom: 100px;
+
     &__wrapper {
         display: flex;
         gap: 24px;
@@ -42,6 +44,8 @@
 
 @media screen and (max-width: $md) {
     .solutions {
+        padding-bottom: 40px;
+        
         &__img {
             height: 220px;
         }

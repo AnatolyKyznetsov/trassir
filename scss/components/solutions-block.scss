@@ -15,6 +15,7 @@
         display: block;
         max-width: 33.33%;
         width: 100%;
+        min-height: 530px;
         padding: 56px;
 
         &:hover {
@@ -68,6 +69,7 @@
     .solutions-block {
         &__item {
             max-width: 50%;
+            min-height: 426px;
         }
     }
 }
@@ -91,6 +93,7 @@
         &__item {
             max-width: 100%;
             padding: 24px;
+            min-height: auto;
 
             &:nth-child(even) {
                 background: var(--color-main-light);

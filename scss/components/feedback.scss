@@ -5,10 +5,6 @@
         margin-top: 0;
     }
 
-    & + .projects {
-        padding-top: 0;
-    }
-
     .container {
         display: flex;
         justify-content: center;
@@ -27,7 +23,7 @@
     &__block {
         border: 2px solid var(--color-main-light);
         border-left: 0;
-        border-bottom: 0;
+        border-top: 0;
         padding: 45px 55px;
         flex-shrink: 0;
         max-width: 563px;
@@ -51,6 +47,7 @@
         }
 
         &__block {
+            border: 2px solid var(--color-main-light);
             border-radius: 0 0 var(--radius-standard) var(--radius-standard);
             max-width: 100%;
 
@@ -71,10 +68,15 @@
 
         &__img {
             height: 250px;
+            margin-left: -16px;
+            margin-right: -16px;
+            width: calc(100% + 32px);
+            border-radius: 0;
         }
 
         &__block {
             padding: 40px 0;
+            border: 0;
 
             .web-form {
                 padding: 0;

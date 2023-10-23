@@ -3,6 +3,10 @@
         margin-top: 0;
     }
 
+    & + .feedback {
+        padding-top: 0;
+    }
+
     &__slider-wrapper:not(.swiper-wrapper) {
         display: flex;
         gap: 24px;
