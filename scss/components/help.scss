@@ -1,0 +1,43 @@
+.help {
+    &__wrapper {
+        background: url('../../images/professionals-support.png') no-repeat right center, var(--color-white);
+        padding: 60px;
+    }
+
+    &__text {
+        color: var(--color-neutral-darkness);
+        font-size: 24px;;
+        font-weight: 600;
+        line-height: 1.33; 
+        max-width: 670px;
+        width: 100%;
+        margin-bottom: 80px;
+    }
+}
+
+@media screen and (max-width: $md) {
+    .help {
+        padding-bottom: 40px;
+
+        &__wrapper {
+            background-position: right top;
+            padding: 355px 16px 24px 16px;
+        }
+
+        &__text {
+            margin-bottom: 36px;
+        }
+    }
+}
+
+@media screen and (max-width: $sm) {
+    .help {
+        &__text {
+            font-size: 18px;
+        }
+
+        .button {
+            width: 100%;
+        }
+    }
+}

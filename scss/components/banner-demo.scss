@@ -5,12 +5,7 @@
     background-position: right top;
     background-size: auto 100%;
 
-    .container {
-        padding-top: 86px;
-        padding-bottom: 86px;
-    }
-
-    &::before {
+    @mixin decoreBefore {
         content: '';
         display: block;
         width: 100%;
@@ -22,7 +17,7 @@
         top: 0;
     }
 
-    &::after {
+    @mixin decoreAfter {
         content: '';
         display: block;
         width: calc(100% - 350px);
@@ -33,6 +28,57 @@
         left: 0;
         top: 0;
         z-index: 1;
+    }
+
+    &_small {
+        background: none;
+
+        &::before {
+            display: none !important;
+        }
+
+        &::after {
+            display: none !important;
+        }
+    }
+
+    &__wrapper {
+        background-image: url('../images/professionals-banner.png');
+        background-repeat: no-repeat;
+        background-position: right top;
+        background-size: auto 100%;
+        position: relative;
+        padding: 60px;
+        border-radius: var(--radius-standard);
+        overflow: hidden;
+
+        .banner-demo__title {
+            max-width: 70%;
+            font-size: 32px;
+        }
+
+        &::before {
+            @include decoreBefore;
+
+            width: 100%;
+        }
+    
+        &::after {
+            @include decoreAfter;
+        }
+    }
+
+    .container {
+        padding-top: 86px;
+        padding-bottom: 86px;
+    }
+
+    &::before {
+        @include decoreBefore;
+    }
+
+    &::after {
+        @include decoreAfter();
     }
 
     &__title {
@@ -51,6 +97,12 @@
     .banner-demo {
         &::after {
             width: calc(100% - 250px);
+        }
+
+        &__wrapper {
+            &::after {
+                width: 80%;
+            }
         }
 
         .container {
@@ -78,11 +130,29 @@
     }
 }
 
+@media screen and (max-width: $md) {
+    .banner-demo {
+        &__wrapper {
+            .banner-demo__title {
+                font-size: 24px;
+            }
+        }
+    }
+}
+
 @media screen and (max-width: $sm) {
     .banner-demo {
         padding-top: 202px;
         background-position: -172px top;
         background-size: auto 360px;
+
+        &_small {
+            padding-top: 0;
+
+            .container {
+                background: none !important;
+            }
+        }
 
         &::after {
             display: none;
@@ -90,6 +160,23 @@
 
         .container {
             background: linear-gradient(0, #050081 60.89%, rgba(5, 0, 129, 0) 100%);
+        }
+
+        &__wrapper {
+            padding: 20px;
+            padding-top: 202px;
+            background-size: 100% auto;
+
+            .banner-demo__title {
+                font-size: 20px;
+                max-width: 100%;
+            }
+
+            &::after {
+                background: linear-gradient(0, #050081 45.89%, rgba(5, 0, 129, 0) 100%);
+                border-radius: 0;
+                width: 100%;
+            }
         }
 
         &__button {

@@ -12,6 +12,7 @@ export default {
                 partner: resolve(__dirname, 'partner.html'),
                 clients: resolve(__dirname, 'clients.html'),
                 company: resolve(__dirname, 'company.html'),
+                professionals: resolve(__dirname, 'professionals.html'),
             },
         },
     },
