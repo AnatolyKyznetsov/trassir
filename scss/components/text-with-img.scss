@@ -1,0 +1,144 @@
+.text-with-img {
+    padding-bottom: 100px;
+
+    &_reverse {
+        .container {
+            flex-direction: row-reverse;
+        }
+    } 
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 80px;
+    }
+
+    .title__section {
+        margin-bottom: 0;
+    }
+
+    &__text {
+        color: var(--color-neutral-dark);
+        font-size: 18px;
+        line-height: 1.44;
+
+        &_large {
+            color: var(--color-neutral-darkness);
+            font-size: 24px;
+            font-weight: 600;
+            line-height: 1.33;
+        }
+    }
+
+    &__inner {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        position: relative;
+
+        &::after,
+        &::before {
+            content: '';
+            display: block;
+            width: 185px;
+            height: 154px;
+            background: url('../images/icons/static/quotes.svg') no-repeat center / contain;
+            position: absolute;
+            z-index: -1;
+        }
+
+        &::before {
+            left: -110px;
+            top: calc(100% + 30px);
+        }
+
+        &::after {
+            transform: scale(-1);
+            right: -110px;
+            bottom: calc(100% + 30px);
+        }
+    }
+
+    &__img {
+        overflow: hidden;
+        border-radius: var(--radius-standard);
+        flex-shrink: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: var(--color-main-middle);
+        position: relative;
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+}
+
+@media screen and (max-width: $lg) {
+    .text-with-img {
+        &__img {
+            max-width: 50%;
+        }
+
+        &__text {
+            font-size: 16px;
+
+            &_large {
+                font-size: 18px;
+            }
+        }
+
+        &__inner {
+            &::after,
+            &::before {
+                width: 92px;
+                height: 77px;
+            }
+
+            &::before {
+                left: 0px;
+                top: auto;
+                bottom: 0;
+            }
+    
+            &::after {
+                right: 0;
+                bottom: auto;
+                top: 0;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: $md) {
+    .text-with-img {
+        padding-bottom: 40px;
+
+        .container {
+            flex-direction: column-reverse;
+            gap: 40px;
+        }
+
+        &__img {
+            max-width: 100%;
+        }
+    }
+}
+
+@media screen and (max-width: $sm) {
+    .text-with-img {
+        &__text {
+            font-size: 14px;
+        }
+
+        &__img {
+            border-radius: 0;
+            margin-left: -16px;
+            margin-right: -16px;
+            max-width: calc(100% + 32px);
+        }
+    }
+}
