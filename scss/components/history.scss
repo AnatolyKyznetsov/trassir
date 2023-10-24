@@ -1,5 +1,5 @@
 .history {
-    background: url('../../images/history.png') no-repeat right top / contain, #F1F4F9;
+    background: url('../images/history.png') no-repeat right top / contain, #F1F4F9;
     padding-bottom: 100px;
 
     &__content {
@@ -13,7 +13,7 @@
             display: block;
             width: 15px;
             height: 16px;
-            background: url('../../images/icons/angle-blue.svg') no-repeat center;
+            background: url('../images/icons/angle-blue.svg') no-repeat center;
             position: absolute;
             bottom: -6px;
             left: -8px;
@@ -60,7 +60,7 @@
     .history {
         padding-top: 200px;
         padding-bottom: 40px;
-        background: url('../../images/history-mob.png') no-repeat center top / contain, #F1F4F9;
+        background: url('../images/history-mob.png') no-repeat center top / contain, #F1F4F9;
 
         &__content {
             padding-left: 32px;
