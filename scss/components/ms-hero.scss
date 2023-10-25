@@ -1,0 +1,52 @@
+.ms-hero {
+    padding-top: 80px;
+    background: url('../images/vms/hero-bg.png') no-repeat center top, #00044c;
+    color: var(--color-white);
+    text-align: center;
+    position: relative;
+
+    &_cms {
+        background: url('../images/cms/hero-bg.png') no-repeat center top, #00044c;
+    }
+
+    &::after {
+        content: '';
+        height: 120px;
+        width: 100%;
+        display: block;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        background: linear-gradient(180deg, rgba(0, 4, 76, 0.00) 0%, #00044C 100%);
+    }
+
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 16px;
+        margin-bottom: 60px;
+    }
+
+    &__title {
+        @extend .title__main;
+
+        color: inherit;
+    }
+    
+    &__text {
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 1.5;
+        max-width: 550px;
+        margin-bottom: 16px;
+    }
+
+    &__img {
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+    }
+}

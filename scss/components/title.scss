@@ -20,6 +20,10 @@
         &_light {
             color: var(--color-white);
         }
+
+        & + .section__subtitle {
+            margin-top: -34px;
+        }
     }
 
     &__block {

@@ -93,7 +93,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 spaceBetween: 24,
                 navigation: {
                     nextEl: next,
-                    prevEl:prev,
+                    prevEl: prev,
                 },
                 mousewheel: {
                     forceToAxis: true,
@@ -261,7 +261,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const contents = item.querySelectorAll('.js-tabsContent');
             const contentsMob = item.querySelectorAll('.js-tabsContentMob');
 
-            if (itemIndex === 0) {
+            if (itemIndex === 0 && (contentsMob[0] && contents[0])) {
                 contentsMob[0].innerHTML = contents[0].innerHTML;
             }
 
@@ -279,6 +279,71 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    const initTabSliders = () => {
+        const sliders = document.querySelectorAll('.js-tabSlider');
+
+        sliders.forEach(slider => {
+            const next = slider.querySelector('.js-defaultSliderNext');
+            const prev = slider.querySelector('.js-defaultSliderPrev')
+            const pagination = slider.querySelector('.js-deafultSliderPagination');
+
+            new Swiper(slider, {
+                slidesPerView: 1,
+                spaceBetween: 24,
+                navigation: {
+                    nextEl: next,
+                    prevEl: prev,
+                },
+                pagination: {
+                    el: pagination,
+                    clickable: true,
+                },
+                mousewheel: {
+                    forceToAxis: true,
+                    invert: false,
+                    thresholdDelta: 25,
+                },
+            });
+        });
+    }
+
+    const fullScreenImagesInit = () => {
+        const blocks = document.querySelectorAll('.js-fullScreenImg');
+
+        const createImg = (src) => {
+            const div = document.createElement('div');
+            div.className = 'full-screen-img__block';
+            const img = document.createElement('img');
+            img.src = src;
+
+            div.append(img);
+            document.body.append(div);
+
+            div.onclick = () => {
+                div.classList.remove('is-active');
+                setTimeout(() => {
+                    div.remove();
+                }, 300);
+            }
+
+            setTimeout(() => {
+                div.classList.add('is-active');
+            }, 10);
+        }
+
+        blocks.forEach(block => {
+            const bigImg = block.dataset.big;
+            const img = block.querySelector('img');
+            const src = bigImg ? bigImg : img.src;
+
+            block.addEventListener('click', () => {
+                createImg(src);
+            });
+        });
+    }
+
+    fullScreenImagesInit();
+    initTabSliders();
     initTabs();
     initModals();
     footerNavMobInit();

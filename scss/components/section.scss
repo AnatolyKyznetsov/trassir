@@ -31,6 +31,12 @@
             margin-bottom: 0;
         }
     }
+
+    &__subtitle {
+        @extend .text-large;
+
+        margin-bottom: 50px;
+    }
 }
 
 @media screen and (max-width: $md) {

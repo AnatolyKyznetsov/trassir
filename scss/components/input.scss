@@ -21,6 +21,10 @@
         border-color: var(--color-error);
     }
 
+    &_for-button {
+        border-radius: var(--radius-standard) 0 0 var(--radius-standard);
+    }
+
     &__area {
         @extend .input;
 

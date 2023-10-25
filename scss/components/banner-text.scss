@@ -1,0 +1,51 @@
+.banner-text {
+    color: var(--color-white);
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 1.5;
+    position: relative;
+    background: url('../images/professionals-support.png') no-repeat right center;
+    padding: 80px 0;
+    text-align: center;
+
+    &__lettering {
+        position: relative;
+        z-index: 2;
+    }
+
+    &__conversion {
+        @extend .button;
+        @extend .button__conversion;
+        @extend .button_for-input;
+
+        font-size: inherit;
+        display: inline-flex;
+        border-radius: 20px var(--radius-standard) 20px var(--radius-standard);
+        padding: 0px 32px;
+        margin-left: 8px;
+    }
+
+    &::before {
+        content: '';
+        display: block;
+        width: calc(100% - 350px);
+        height: 100%;
+        background: linear-gradient(-270deg, #07008C 76.89%, rgba(11, 0, 190, 0.32) 100%);
+        border-radius: 0 550px 0 0;
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 1;
+    }
+
+    &::after {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 100%;
+        background: #{HexToRGBA($color-conv-second-dark, 0.5)};
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+}

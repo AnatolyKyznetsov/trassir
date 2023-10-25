@@ -19,4 +19,10 @@
             opacity: 1;
         }
     }
+
+    &_dark {
+        .swiper-pagination-bullet {
+            background: var(--color-conv-second-dark);
+        }
+    }
 }

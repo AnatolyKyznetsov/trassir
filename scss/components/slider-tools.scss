@@ -1,0 +1,37 @@
+.slider-tools {
+    left: 0;
+    bottom: 0;
+    z-index: 2;
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    height: 64px;
+    transition: .2s linear;
+    z-index: 1;
+
+    &_static {
+        position: static;
+    }
+
+    &_centered {
+        justify-content: center;
+    }
+
+    &.is-hidden {
+        display: none;
+    }
+
+    .nav-button {
+        height: 100%;
+        padding: 0 63px;
+        display: flex;
+        align-items: center;
+        justify-content: start;
+    }
+
+    &:hover {
+        background: #{HexToRGBA($color-main-light, 0.1)};
+    }
+}

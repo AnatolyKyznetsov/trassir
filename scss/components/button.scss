@@ -16,6 +16,7 @@
     color: var(--color-white);
     border-radius: 50px var(--radius-standard) var(--radius-standard) var(--radius-standard);
     transition: .1s linear;
+    white-space: nowrap;
 
     &-reset {
         border: 0;
@@ -58,9 +59,8 @@
     }
 
     &_for-input {
-        height: 48px;
         padding: 0 42px 0 32px;
-        border-radius: var(--radius-standard) 50px var(--radius-standard) var(--radius-standard);
+        border-radius: 0 50px var(--radius-standard) 0;
     
     }
 

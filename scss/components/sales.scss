@@ -6,32 +6,6 @@
         border-radius: var(--radius-standard);
     }
 
-    &__slider-tools {
-        left: 0;
-        width: 100%;
-        bottom: 0;
-        z-index: 2;
-        position: absolute;
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-end;
-        height: 64px;
-        transition: .2s linear;
-        z-index: 1;
-
-        .nav-button {
-            height: 100%;
-            padding: 0 63px;
-            display: flex;
-            align-items: center;
-            justify-content: start;
-        }
-
-        &:hover {
-            background: #{HexToRGBA($color-main-light, 0.1)};
-        }
-    }
-
     &__slide {
         display: block;
         background: url('../images/sale/bg.png') no-repeat center, linear-gradient(90.05deg, #1201d3 39.84%, #661677);

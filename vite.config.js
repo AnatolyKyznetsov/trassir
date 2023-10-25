@@ -13,6 +13,8 @@ export default {
                 clients: resolve(__dirname, 'clients.html'),
                 company: resolve(__dirname, 'company.html'),
                 professionals: resolve(__dirname, 'professionals.html'),
+                vms: resolve(__dirname, 'vms.html'),
+                cms: resolve(__dirname, 'cms.html'),
             },
         },
     },
