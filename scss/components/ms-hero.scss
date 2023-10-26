@@ -50,3 +50,36 @@
         }
     }
 }
+
+@media screen and (max-width: $md) {
+    .ms-hero {
+        padding-top: 50px;
+
+        &__title {
+            font-size: 40px;
+        }
+    }
+}
+
+@media screen and (max-width: $sm) {
+    .ms-hero {
+        text-align: left;
+
+        &::after {
+            height: 100px;
+        }
+
+        &__wrapper {
+            align-items: flex-start;
+            margin-bottom: 48px;
+        }
+
+        &__text {
+            font-size: 16px;
+        }
+
+        .button {
+            width: 100%;
+        }
+    }
+}

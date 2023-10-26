@@ -49,3 +49,24 @@
         top: 0;
     }
 }
+
+@media screen and (max-width: $lg) {
+    .banner-text {
+        &::before {
+            width: 100%;
+            border-radius: 0;
+            background: linear-gradient(-270deg, #07008C 4.89%, rgba(11, 0, 190, 0.32) 100%);
+        }
+    }
+}
+
+@media screen and (max-width: $md) {
+    .banner-text {
+        padding: 32px 0;
+        font-size: 20px;
+
+        &__conversion {
+            height: 40px;
+        }
+    }
+}

@@ -27,3 +27,37 @@
         }
     }
 }
+
+@media screen and (max-width: $lg) {
+    .vms-clients {
+        &__wrapper {
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 48px;
+            max-width: 680px;
+            margin: 0 auto;
+        }
+    }
+}
+
+@media screen and (max-width: $md) {
+    .vms-clients {
+        padding: 40px 0;
+
+        .title__section {
+            margin-bottom: 48px;
+        }
+
+        &__wrapper {
+            gap: 24px;
+        }
+    }
+}
+
+@media screen and (max-width: $sm) {
+    .vms-clients {
+        .title__section {
+            margin-bottom: 32px;
+        }
+    }
+}

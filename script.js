@@ -256,27 +256,48 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         }
 
+        const copyContent = (desktop, mobile) => {
+            const isSmallScreen = window.innerWidth < media.md;
+            const from = isSmallScreen ? desktop : mobile;
+            const to = isSmallScreen ? mobile : desktop;
+
+            if (Array.from(to.children).length !== 0) {
+                return false;
+            }
+
+            Array.from(from.children).forEach(node => {
+                to.append(node);
+            });
+        }
+
         tabs.forEach((item, itemIndex) => {
+            let activeIndex = 0;
             const btns = item.querySelectorAll('.js-tabsTab');
             const contents = item.querySelectorAll('.js-tabsContent');
             const contentsMob = item.querySelectorAll('.js-tabsContentMob');
 
             if (itemIndex === 0 && (contentsMob[0] && contents[0])) {
-                contentsMob[0].innerHTML = contents[0].innerHTML;
+                copyContent(contents[0], contentsMob[0]);
             }
 
             btns.forEach((btn, index) => {
                 btn.addEventListener('click', () => {
                     if (contentsMob[index] && contents[index]) {
-                        contentsMob[index].innerHTML = contents[index].innerHTML;
+                        copyContent(contents[index], contentsMob[index]);
                     }
                     
+                    activeIndex = index;
                     toggleActive(btns, index);
                     toggleActive(contents, index);               
                     toggleActive(contentsMob, index);
                 });
             });
+
+            window.addEventListener('resize', () => {
+                copyContent(contents[activeIndex], contentsMob[activeIndex]);
+            });
         });
+
     }
 
     const initTabSliders = () => {
@@ -308,8 +329,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     const fullScreenImagesInit = () => {
-        const blocks = document.querySelectorAll('.js-fullScreenImg');
-
         const createImg = (src) => {
             const div = document.createElement('div');
             div.className = 'full-screen-img__block';
@@ -331,14 +350,14 @@ document.addEventListener('DOMContentLoaded', () => {
             }, 10);
         }
 
-        blocks.forEach(block => {
-            const bigImg = block.dataset.big;
-            const img = block.querySelector('img');
-            const src = bigImg ? bigImg : img.src;
-
-            block.addEventListener('click', () => {
+        document.addEventListener('click', e => { 
+            if (e.target.closest('.js-fullScreenImg')) {
+                const block = e.target.closest('.js-fullScreenImg');
+                const bigImg = block.dataset.big;
+                const img = block.querySelector('img');
+                const src = bigImg ? bigImg : img.src;                
                 createImg(src);
-            });
+            }
         });
     }
 

@@ -53,3 +53,40 @@
         pointer-events: none;
     }
 }
+
+@media screen and (max-width: $md) {
+    .purchase {
+        padding-bottom: 40px;
+
+        &__item  {
+            padding: 30px;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        &__price {
+            display: block;
+        }
+    }
+}
+
+@media screen and (max-width: $sm) {
+    .purchase {
+        &__item-title  {
+            font-size: 18px;
+        }
+
+        &__item-text  {
+            font-size: 12px;
+        }
+
+        &__price {
+            font-size: 18px;
+        }
+
+        &__button {
+            max-width: 100%;
+            width: 100%;
+        }
+    }
+}

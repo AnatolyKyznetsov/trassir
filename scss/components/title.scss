@@ -48,6 +48,10 @@
         &__section {
             font-size: 24px;
             margin-bottom: 20px;
+
+            & + .section__subtitle {
+                margin-top: -8px;
+            }
         } 
 
         &__block {

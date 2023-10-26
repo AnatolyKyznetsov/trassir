@@ -38,6 +38,10 @@
                 opacity: 1;
             }
         }
+
+        img {
+            pointer-events: none;
+        }
     }
 
 
@@ -63,6 +67,14 @@
             max-width: 100%;
             width: auto;
             height: auto;
+        }
+    }
+}
+
+@media screen and (max-width: $sm) {
+    .full-screen-img {
+        &__block {
+            padding: 20px;
         }
     }
 }
