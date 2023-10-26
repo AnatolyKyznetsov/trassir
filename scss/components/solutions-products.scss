@@ -6,7 +6,7 @@
     }
 
     &__item {
-        background: var(--color-white) url('../../images/solutions-products/bg.svg') no-repeat top left / cover;
+        background: var(--color-white) url('../images/solutions-products/bg.svg') no-repeat top left / cover;
         max-width: calc(50% - 12px);
         width: 100%;
         height: 329px;
@@ -27,7 +27,7 @@
             border-color: #0116BB;
             color: var(--color-white);
             background-color: var(--color-conv-second-light);
-            background-image: url('../../images/solutions-products/bg_hover.svg') ;
+            background-image: url('../images/solutions-products/bg_hover.svg') ;
         }
     }
 
