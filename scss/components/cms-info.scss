@@ -1,0 +1,94 @@
+.cms-info {
+    padding-bottom: 40px;
+
+    &__wrapper {
+        border-left: 2px dashed var(--color-conv-second-dark);
+        padding-left: 24px;
+    }
+
+    &__icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+    }
+
+    &__card {
+        background: var(--color-main-middle);
+        border-radius: var(--radius-standard);
+        color: var(--color-neutral-darkness);
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 1.44;
+        padding: 40px 50px;
+        gap: 32px;
+        display: flex;
+        align-items: center;
+        position: relative;
+
+        &::after {
+            content: '';
+            display: block;
+            width: 12px;
+            height: 12px;
+            background: var(--color-conv-second-dark);
+            top: 50%;
+            transform: translateY(-50%);
+            left: -30px;
+            border-radius: 100%;
+            position: absolute;
+        }
+
+        &::before {
+            content: '';
+            display: none;
+            width: 5px;
+            height: 50%;
+            background: var(--color-main-light);
+            position: absolute;
+            left: -27px;
+        }
+
+        &:first-child {
+            &::before {
+                display: block;
+                top: 0;
+            }
+        }
+
+        &:last-child {
+            &::before {
+                display: block;
+                bottom: 0;
+            }
+        }
+
+        &:not(:last-child) {
+            margin-bottom: 24px;
+        }
+    }
+}
+
+@media screen and (max-width: $md) {
+    .cms-info {
+        &__icon {
+            width: 36px;
+        } 
+
+        &__card {
+            padding: 24px 20px;
+            font-size: 14px;
+            gap: 12px;
+            align-items: flex-start;
+
+            &:not(:last-child) {
+                margin-bottom: 12px;
+            }
+        }
+    }
+}

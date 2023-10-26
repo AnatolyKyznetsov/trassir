@@ -1,0 +1,134 @@
+.cms-description {
+    padding-bottom: 100px;
+
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        gap: 24px;
+        counter-reset: i;
+    }
+
+    &__card {
+        color: var(--color-neutral-darkness);
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 1.5;
+        min-height: 250px;
+        background: var(--color-main-light);
+        border-radius: var(--radius-standard);
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        padding: 50px;
+        max-width: calc(33.3% - 12px);
+        position: relative;
+
+        &::after {
+            counter-increment: i; 
+            content: counter(i);
+            position: absolute;
+            top: 0;
+            right: 0;
+            background: #{HexToRGBA($color-main-middle, 0.8)};
+            padding-left: 16px;
+            width: 105px;
+            height: 66px;
+            border-radius: 0px 0px 0px 72px;
+            color: var(--color-neutral-middle);
+            font-size: 18px;
+            font-weight: 600;
+            line-height: 1.5;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-sizing: border-box;
+        }
+
+        &:not(:last-child) {
+            &::before {
+                content: '';
+                display: block;
+                width: 54px;
+                height: 24px;
+                background: url('../images/icons/static/arrow.svg') no-repeat center;
+                position: absolute;
+                right: -24px;
+                bottom: 24px;
+            }
+        }
+    }
+
+    &__img {
+        margin-top: 32px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &_mob {
+            display: none;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+    }
+}
+
+@media screen and (max-width: $md) {
+    .cms-description {
+        padding-bottom: 40px;
+
+        &__wrapper {
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        &__card {
+            max-width: 100%;
+            padding: 30px 72px 40px 30px;
+            min-height: 142px;
+
+            &::after {
+                max-width: 84px;
+            }
+
+            &:not(:last-child) {
+                &::before {
+                    content: '';
+                    display: block;
+                    width: 54px;
+                    height: 24px;
+                    left: 24px;
+                    transform: rotate(90deg) scale(.7);
+                    bottom: -4px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: $sm) {
+    .cms-description {
+        &__card {
+            font-size: 16px;
+        }
+
+        &__img {
+            display: none;
+
+            &_mob {
+                margin-bottom: 50px;
+                display: flex;
+                max-width: calc(100% + 32px);
+                margin-left: -16px;
+                margin-right: -16px;
+
+                img {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
