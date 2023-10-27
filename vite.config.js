@@ -15,6 +15,7 @@ export default {
                 professionals: resolve(__dirname, 'professionals.html'),
                 vms: resolve(__dirname, 'vms.html'),
                 cms: resolve(__dirname, 'cms.html'),
+                dvr: resolve(__dirname, 'dvr.html'),
             },
         },
     },
