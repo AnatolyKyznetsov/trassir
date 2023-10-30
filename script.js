@@ -273,13 +273,6 @@ document.addEventListener('DOMContentLoaded', () => {
             Array.from(from.children).forEach(node => {
                 to.append(node);
             });
-
-            if (btn && isSmallScreen) {
-                setTimeout(() => {
-                    const rect = btn.getBoundingClientRect();
-                    window.scroll(0, rect.top + document.documentElement.scrollTop - 20);
-                }, 10);
-            }
         }
 
         tabs.forEach((item, itemIndex) => {
@@ -295,7 +288,12 @@ document.addEventListener('DOMContentLoaded', () => {
             btns.forEach((btn, index) => {
                 btn.addEventListener('click', () => {
                     if (contentsMob[index] && contents[index]) {
-                        copyContent(contents[index], contentsMob[index], btn);
+                        copyContent(contents[index], contentsMob[index]);
+
+                        if (window.innerWidth < media.md) {
+                            const rect = btn.getBoundingClientRect();
+                            window.scroll(0, rect.top + document.documentElement.scrollTop - 20);
+                        }
                     }
                     
                     activeIndex = index;
