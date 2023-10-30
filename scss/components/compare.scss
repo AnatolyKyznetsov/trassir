@@ -86,6 +86,7 @@
             width: 960px;
             align-items: stretch;
             border-radius: 0;
+            font-size: 14px;
 
             &:nth-child(even) { 
                 &::before {
@@ -94,7 +95,6 @@
             }
 
             &::before {
-                font-size: 14px;
                 max-width: 100px;
                 width: 100%;
                 flex-shrink: 0;
