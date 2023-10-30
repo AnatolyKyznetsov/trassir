@@ -291,8 +291,10 @@ document.addEventListener('DOMContentLoaded', () => {
                         copyContent(contents[index], contentsMob[index]);
 
                         if (window.innerWidth < media.md) {
-                            const rect = btn.getBoundingClientRect();
-                            window.scroll(0, rect.top + document.documentElement.scrollTop - 20);
+                            setTimeout(() => {
+                                const rect = btn.getBoundingClientRect();
+                                window.scroll(0, rect.top + document.documentElement.scrollTop - 20);
+                            }, 10);
                         }
                     }
                     
