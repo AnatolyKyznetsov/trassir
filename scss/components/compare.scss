@@ -94,7 +94,8 @@
             }
 
             &::before {
-                max-width: 150px;
+                font-size: 14px;
+                max-width: 100px;
                 width: 100%;
                 flex-shrink: 0;
                 overflow: hidden;
@@ -135,16 +136,6 @@
             overflow-x: auto;
             margin-left: -16px;
             margin-right: -16px;
-        }
-    }
-}
-
-@media screen and (max-width: $sm) {
-    .compare {
-        &__line {
-            &::before {
-                max-width: 40vw;
-            }
         }
     }
 }
