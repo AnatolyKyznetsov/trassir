@@ -366,6 +366,51 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    const comapreHeadInit = () => {
+        const table = document.querySelector('.js-compareTable');
+        const namesBlock = document.querySelector('.js-compareTableNames');
+        const wrapper = document.querySelector('.js-compareWrapper');
+        let fakeHead = null;
+
+        const createFakeHead = () => {
+            const div = document.createElement('div');
+            div.className = 'compare__head js-compareHead';
+
+            const cloneElems = namesBlock.cloneNode(true);
+            div.append(cloneElems);
+            div.scrollLeft = table.scrollLeft;
+
+            wrapper.insertBefore(div, table);
+            fakeHead = div;
+        }
+
+        const showFakeHead = () => {
+            const tableRect = table.getBoundingClientRect();
+            const namesRect = namesBlock.getBoundingClientRect();
+
+            const tableVivible = namesRect.top < 0 && tableRect.top < 0 && tableRect.top + tableRect.height > 0 && window.innerHeight - tableRect.top > 0
+
+            if (tableVivible) {
+                fakeHead.classList.add('is-active');
+            } else {
+                fakeHead.classList.remove('is-active');
+            }
+        }
+
+        createFakeHead();
+
+        window.addEventListener('scroll', () => {
+            showFakeHead();
+        });
+
+        table.addEventListener('scroll', e => {
+            const fakeHead = document.querySelector('.js-compareHead');
+            
+            fakeHead.scrollLeft = e.target.scrollLeft;
+        });
+    }
+
+    comapreHeadInit();
     fullScreenImagesInit();
     initTabSliders();
     initTabs();
