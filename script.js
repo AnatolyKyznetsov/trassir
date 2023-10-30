@@ -266,13 +266,6 @@ document.addEventListener('DOMContentLoaded', () => {
             const from = isSmallScreen ? desktop : mobile;
             const to = isSmallScreen ? mobile : desktop;
 
-            if (btn && isSmallScreen) {
-                const rect = btn.getBoundingClientRect();
-                window.scroll({
-                    top: rect.top + document.documentElement.scrollTop - 20,
-                });
-            }
-
             if (!to || Array.from(to.children).length !== 0) {
                 return false;
             }
@@ -280,6 +273,11 @@ document.addEventListener('DOMContentLoaded', () => {
             Array.from(from.children).forEach(node => {
                 to.append(node);
             });
+
+            if (btn && isSmallScreen) {
+                const rect = btn.getBoundingClientRect();
+                window.scroll(0, rect.top + document.documentElement.scrollTop - 20);
+            }
         }
 
         tabs.forEach((item, itemIndex) => {
