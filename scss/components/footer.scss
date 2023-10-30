@@ -118,98 +118,98 @@
     }
 }
 
-// @media screen and (max-width: $md){
-//     .footer {
-//         margin-top: 40px;
-//         padding: 8px 0px 40px;
+@media screen and (max-width: $md){
+    .footer {
+        margin-top: 40px;
+        padding: 8px 0px 40px;
 
-//         &__wrapper {
-//             gap: 0;
-//             flex-wrap: nowrap;
-//             flex-direction: column;
-//             padding-bottom: 16px;
-//             border-bottom: none;
-//         }
+        &__wrapper {
+            gap: 0;
+            flex-wrap: nowrap;
+            flex-direction: column;
+            padding-bottom: 16px;
+            border-bottom: none;
+        }
 
-//         &__block {
-//             margin: 0;
-//             flex: 1;
-//             min-width: auto;
-//             padding: 24px 0px;
-//             width: 100%;
+        &__block {
+            margin: 0;
+            flex: 1;
+            min-width: auto;
+            padding: 24px 0px;
+            width: 100%;
 
-//             &:last-child {
-//                 padding-top: 40px;
-//             }
+            &:last-child {
+                padding-top: 40px;
+            }
 
-//             &:not(:last-child) {
-//                 border-bottom: 1px solid #{HexToRGBA($color-white, 0.2)};
+            &:not(:last-child) {
+                border-bottom: 1px solid #{HexToRGBA($color-white, 0.2)};
 
-//                 .footer__title {
-//                     position: relative;
-//                     padding-right: 30px;
+                .footer__title {
+                    position: relative;
+                    padding-right: 30px;
 
-//                     &::after {
-//                         content: '';
-//                         display: block;
-//                         width: 15px;
-//                         height: 16px;
-//                         background: url('../images/icons/angle.svg') no-repeat center;
-//                         position: absolute;
-//                         top: 50%;
-//                         transform: translateY(-50%);
-//                         right: 0;
-//                         transition: .1s linear;
-//                     }
-//                 }
-//             }
+                    &::after {
+                        content: '';
+                        display: block;
+                        width: 15px;
+                        height: 16px;
+                        background: url('../images/icons/angle.svg') no-repeat center;
+                        position: absolute;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        right: 0;
+                        transition: .1s linear;
+                    }
+                }
+            }
 
-//             &.is-active {
-//                 .footer__list {
-//                     margin-top: 24px;
-//                 }
+            &.is-active {
+                .footer__list {
+                    margin-top: 24px;
+                }
 
-//                 .footer__title {
-//                     &::after {
-//                         transform: translateY(-50%) scaleY(-1);
-//                     }
-//                 }
-//             }
-//         }
+                .footer__title {
+                    &::after {
+                        transform: translateY(-50%) scaleY(-1);
+                    }
+                }
+            }
+        }
 
-//         &__title {
-//             margin-bottom: 0;
-//             font-size: 16px;
-//         }
+        &__title {
+            margin-bottom: 0;
+            font-size: 16px;
+        }
 
-//         &__list {
-//             max-width: 100%;
-//             transition: .1s linear;
+        &__list {
+            max-width: 100%;
+            transition: .1s linear;
 
-//             &:not(.footer__list_contacts) {
-//                 max-height: 0;
-//                 overflow: hidden;
-//             }
+            &:not(.footer__list_contacts) {
+                max-height: 0;
+                overflow: hidden;
+            }
 
-//             &_contacts {
-//                 margin-top: 24px;
-//             }
-//         }
+            &_contacts {
+                margin-top: 24px;
+            }
+        }
 
-//         &__socials {
-//             margin-top: 40px;
-//         }
+        &__socials {
+            margin-top: 40px;
+        }
 
-//         &__credits {
-//             flex-direction: column;
-//             align-items: flex-start;
-//             gap: 10px;
-//         }
+        &__credits {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 10px;
+        }
 
-//         &__link {
-//             &:not(:last-child) {
-//                 margin-bottom: 20px;
-//             }
-//         }
-//     }
-// }
+        &__link {
+            &:not(:last-child) {
+                margin-bottom: 20px;
+            }
+        }
+    }
+}
