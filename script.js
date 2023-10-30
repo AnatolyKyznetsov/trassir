@@ -296,7 +296,7 @@ document.addEventListener('DOMContentLoaded', () => {
                                 window.scroll({
                                     left:0,
                                     top: rect.top + document.documentElement.scrollTop - 20,
-                                    behavior: "smooth",
+                                    behavior: 'smooth',
                                 });
                             }, 10);
                         }
