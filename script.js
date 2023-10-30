@@ -445,6 +445,4 @@ document.addEventListener('DOMContentLoaded', () => {
     headerSeachInit();
     initSalesSlider();
     initDefaultSliders();
-
-    alert(window.innerWidth)
 });
