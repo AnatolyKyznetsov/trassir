@@ -276,9 +276,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
             if (btn && isSmallScreen) {
                 setTimeout(() => {
-          const rect = btn.getBoundingClientRect();
-                window.scroll(0, rect.top + document.documentElement.scrollTop - 20);
-                }, 1000)
+                    const rect = btn.getBoundingClientRect();
+                    window.scroll(0, rect.top + document.documentElement.scrollTop - 20);
+                }, 10);
             }
         }
 
