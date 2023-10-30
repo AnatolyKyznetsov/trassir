@@ -261,10 +261,17 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         }
 
-        const copyContent = (desktop, mobile) => {
+        const copyContent = (desktop, mobile, btn) => {
             const isSmallScreen = window.innerWidth < media.md;
             const from = isSmallScreen ? desktop : mobile;
             const to = isSmallScreen ? mobile : desktop;
+
+            if (btn && isSmallScreen) {
+                const rect = btn.getBoundingClientRect();
+                window.scroll({
+                    top: rect.top + document.documentElement.scrollTop - 20,
+                });
+            }
 
             if (!to || Array.from(to.children).length !== 0) {
                 return false;
@@ -288,7 +295,7 @@ document.addEventListener('DOMContentLoaded', () => {
             btns.forEach((btn, index) => {
                 btn.addEventListener('click', () => {
                     if (contentsMob[index] && contents[index]) {
-                        copyContent(contents[index], contentsMob[index]);
+                        copyContent(contents[index], contentsMob[index], btn);
                     }
                     
                     activeIndex = index;
