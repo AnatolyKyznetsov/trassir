@@ -379,7 +379,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
             const cloneElems = namesBlock.cloneNode(true);
             div.append(cloneElems);
-            div.scrollLeft = table.scrollLeft;
 
             wrapper.insertBefore(div, table);
             fakeHead = div;
@@ -397,6 +396,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             if (tableVivible) {
                 fakeHead.classList.add('is-active');
+                fakeHead.scrollLeft = table.scrollLeft;
 
                 if (!fakeHeadHeight) {
                     fakeHeadHeight = fakeHead.scrollHeight;
