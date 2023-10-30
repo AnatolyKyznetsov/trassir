@@ -13,7 +13,7 @@
         display: flex;
         align-items: center;
         gap: 16px;
-        justify-content: center;
+        justify-content: flex-start;
         margin-bottom: 40px;
         flex-wrap: wrap;
     }
@@ -46,5 +46,40 @@
 
     .slider-tools {
         margin-top: 20px;
+    }
+}
+
+@media screen and (max-width: $md) {
+    .products-slider {
+        padding-bottom: 20px;
+
+        .section__inner {
+            & + .products-slider__outer {
+                .products-slider__tabs {
+                    margin-top: 30px;
+                }
+            }
+        }
+
+        &__tabs {
+            gap: 8px;
+            margin-bottom: 30px;
+        }
+
+        &__tab {
+            font-size: 18px;
+        }
+    }
+}
+
+@media screen and (max-width: $sm) {
+    .products-slider {
+        .slider-pagination {
+            display: none;
+        }
+
+        .product-card {
+            max-width: 100%;
+        }
     }
 }

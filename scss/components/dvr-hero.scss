@@ -50,3 +50,37 @@
         }
     }
 }
+
+@media screen and (max-width: $sm) {
+    .dvr-hero {
+        position: relative;
+        margin-top: 48px;
+
+        .breadcrumbs {
+            margin-bottom: 0;
+            position: absolute;
+            left: 16px;
+            top: -48px;
+        }
+
+        &__img {
+            &::after {
+                display: none;
+            }
+        }
+
+        .hero__benefits {
+            &-item {
+                max-width: 100%;
+
+                &:last-child {
+                    display: block;
+
+                    &::before {
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+}

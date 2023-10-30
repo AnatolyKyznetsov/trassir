@@ -28,6 +28,7 @@
         transition: .1s linear;
         border: 2px solid var(--color-white);
         min-height: 202px;
+        justify-content: space-between;
 
         &:hover {
             color: var(--color-conv-second-dark);
@@ -127,5 +128,71 @@
         font-size: 12px;
         display: block;
         color: var(--color-neutral-middle);
+    }
+}
+
+@media screen and (max-width: $lg) {
+    .dvr-info {
+        &__tab {
+            min-height: unset;
+        }
+    }
+}
+
+@media screen and (max-width: $md) {
+    .dvr-info {
+        padding-bottom: 40px;
+
+        &__tab {
+            max-width: 100%;
+            max-height: 100px;
+            flex-direction: row-reverse;
+            justify-content: center;
+
+            img {
+                max-height: 80px;
+            }
+        }
+
+        &__tabs {
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        &__contents {
+            display: none;
+        }
+
+
+        &__content {
+            &_mob {
+                padding: 24px 0;
+
+                &.is-active {
+                    display: block;
+                } 
+
+                .dvr-info__img {
+                    max-width: 40%;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: $sm) {
+    .dvr-info {
+        &__outer {
+            flex-direction: column-reverse;
+            gap: 0;
+        }
+
+        &__content {
+            &_mob {
+                .dvr-info__img {
+                    max-width: 100%;
+                }
+            }
+        }
     }
 }
