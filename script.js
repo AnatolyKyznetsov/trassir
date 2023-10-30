@@ -86,7 +86,8 @@ document.addEventListener('DOMContentLoaded', () => {
         
         sliders.forEach(slider => {
             const next = slider.querySelector('.js-defaultSliderNext');
-            const prev = slider.querySelector('.js-defaultSliderPrev')
+            const prev = slider.querySelector('.js-defaultSliderPrev');
+            const pagination = slider.querySelector('.js-deafultSliderPagination');
 
             new Swiper(slider, {
                 slidesPerView: 'auto',
@@ -94,6 +95,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 navigation: {
                     nextEl: next,
                     prevEl: prev,
+                },
+                pagination: {
+                    el: pagination,
+                    clickable: true,
                 },
                 mousewheel: {
                     forceToAxis: true,
@@ -261,7 +266,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const from = isSmallScreen ? desktop : mobile;
             const to = isSmallScreen ? mobile : desktop;
 
-            if (Array.from(to.children).length !== 0) {
+            if (!to || Array.from(to.children).length !== 0) {
                 return false;
             }
 
@@ -329,7 +334,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     const fullScreenImagesInit = () => {
-        const createImg = (src) => {
+        const createImg = src => {
             const div = document.createElement('div');
             div.className = 'full-screen-img__block';
             const img = document.createElement('img');
