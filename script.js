@@ -293,7 +293,11 @@ document.addEventListener('DOMContentLoaded', () => {
                         if (window.innerWidth < media.md) {
                             setTimeout(() => {
                                 const rect = btn.getBoundingClientRect();
-                                window.scroll(0, rect.top + document.documentElement.scrollTop - 20);
+                                window.scroll({
+                                    left:0,
+                                    top: rect.top + document.documentElement.scrollTop - 20,
+                                    behavior: "smooth",
+                                });
                             }, 10);
                         }
                     }
