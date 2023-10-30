@@ -368,6 +368,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const comapreHeadInit = () => {
         const table = document.querySelector('.js-compareTable');
+
+        if (!table) {
+            return false;
+        }
+
         const namesBlock = document.querySelector('.js-compareTableNames');
         const wrapper = document.querySelector('.js-compareWrapper');
         let fakeHead = null;
@@ -395,8 +400,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 window.innerHeight - tableRect.top > 0;
 
             if (tableVivible) {
-                fakeHead.classList.add('is-active');
                 fakeHead.scrollLeft = table.scrollLeft;
+                fakeHead.classList.add('is-active');
 
                 if (!fakeHeadHeight) {
                     fakeHeadHeight = fakeHead.scrollHeight;
