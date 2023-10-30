@@ -371,6 +371,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const namesBlock = document.querySelector('.js-compareTableNames');
         const wrapper = document.querySelector('.js-compareWrapper');
         let fakeHead = null;
+        let fakeHeadHeight = 0;
 
         const createFakeHead = () => {
             const div = document.createElement('div');
@@ -388,10 +389,18 @@ document.addEventListener('DOMContentLoaded', () => {
             const tableRect = table.getBoundingClientRect();
             const namesRect = namesBlock.getBoundingClientRect();
 
-            const tableVivible = namesRect.top < 0 && tableRect.top < 0 && tableRect.top + tableRect.height > 0 && window.innerHeight - tableRect.top > 0
+            const tableVivible = 
+                namesRect.top < 0 && 
+                tableRect.top < 0 && 
+                tableRect.top + tableRect.height - fakeHeadHeight > 0 &&
+                window.innerHeight - tableRect.top > 0;
 
             if (tableVivible) {
                 fakeHead.classList.add('is-active');
+
+                if (!fakeHeadHeight) {
+                    fakeHeadHeight = fakeHead.scrollHeight;
+                }
             } else {
                 fakeHead.classList.remove('is-active');
             }

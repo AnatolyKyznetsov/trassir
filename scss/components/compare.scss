@@ -55,7 +55,6 @@
         position: sticky;
         left: 0;
         top: 0;
-        bottom: 50px;
         width: 100%;
         overflow: auto;
         pointer-events: none;
@@ -121,9 +120,6 @@
         }
 
         &__head {
-            margin-left: -16px;
-            margin-right: -16px;
-            width: calc(100% + 32px);
             position: fixed;
 
             .compare__line {
