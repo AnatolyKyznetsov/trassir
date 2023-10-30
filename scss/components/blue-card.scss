@@ -94,7 +94,7 @@
         line-height: 1.33;
 
         &::before {
-            content: attr(data-text);
+            // content: attr(data-text);
             color: var(--color-neutral-darkness);
             position: absolute;
             left: 0;
