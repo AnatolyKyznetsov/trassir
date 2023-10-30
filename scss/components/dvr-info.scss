@@ -31,11 +31,13 @@
 
         &:hover {
             color: var(--color-conv-second-dark);
+            border-color: var(--color-conv-second-dark);
         }
 
         &.is-active {
             border-color: var(--color-conv-second-dark);
-            color: var(--color-conv-second-dark);
+            background: var(--color-conv-second-dark);
+            color: var(--color-white);
         }
     }
 
@@ -44,12 +46,9 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        flex-shrink: 0;
 
         &_content {
-            background: var(--color-white);
-            padding: 20px;
-            border-radius: var(--radius-standard);
-            flex-shrink: 0;
         }
 
         img {
