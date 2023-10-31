@@ -3,6 +3,9 @@ import handlebars from 'vite-plugin-handlebars';
 import { viteStaticCopy } from 'vite-plugin-static-copy'
 
 export default {
+    server: {
+        host: '0.0.0.0'
+    },
     build: {
         rollupOptions: {
             input: {
@@ -16,6 +19,7 @@ export default {
                 vms: resolve(__dirname, 'vms.html'),
                 cms: resolve(__dirname, 'cms.html'),
                 dvr: resolve(__dirname, 'dvr.html'),
+                cameras: resolve(__dirname, 'cameras.html'),
             },
         },
     },
