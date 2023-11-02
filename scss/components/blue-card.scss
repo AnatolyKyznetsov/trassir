@@ -140,10 +140,17 @@
                 &::before {
                     font-size: 24px;
                 }
+
+                &_small {
+                    &::before {
+                        font-size: 16px;
+                    }
+                }
             }
         }
     }
 }
+
 @media screen and (max-width: $md) {
     .blue-card {
         $text: 18px;

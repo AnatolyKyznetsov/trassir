@@ -148,6 +148,8 @@
 
         &__tab {
             max-width: 100%;
+            border-left: 0;
+            border-right: 0;
         }
 
         &__tab-content {
@@ -177,18 +179,46 @@
         &__tab {
             padding: 20px;
             height: 84px;
+            margin-left: -16px;
+            margin-right: -16px;
+            max-width: calc(100% + 32px);
+            width: calc(100% + 32px);
+            border-radius: 0;
+            
+            &.is-active {
+                width: calc(100% + 32px);
+            }
         }
 
         &__tab-text {
-            font-size: 14px;
+            font-size: 16px;
             margin-left: 16px;
         }
 
         &__tab-content {
             &_mob {
+                padding-bottom: 32px;
                 margin-top: 16px;
                 gap: 16px;
+
+                & > .ms-tabs__slide {
+                    margin-left: -16px;
+                    margin-right: -16px;
+                    max-width: calc(100% + 32px);
+                    width: calc(100% + 32px);
+                }
             }
+        }
+
+        &__slider {
+            margin-left: -16px;
+            margin-right: -16px;
+            max-width: calc(100% + 32px);
+            width: calc(100% + 32px);
+        }
+
+        &__slide {
+            border-radius: 0;
         }
     }
 }

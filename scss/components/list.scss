@@ -1,4 +1,7 @@
 .list {
+    font-size: inherit;
+
+
     &__item {
         color: var(--color-neutral-darkness);
         font-size: 18px;
@@ -21,6 +24,25 @@
         &:not(:last-child) {
             margin-bottom: 10px;
         }
+    }
+
+    &-count {
+        counter-reset: i;
+
+        .list__item {
+            &::before {
+                counter-increment: i; 
+                content: counter(i) '.';
+                flex-shrink: 0;
+                margin-right: 10px;
+                margin-top: 0;
+                font-weight: 500;
+                color: var(--color-conv-dark);
+                width: auto;
+                height: auto;
+                background: none;
+            }
+        }    
     }
 }
 

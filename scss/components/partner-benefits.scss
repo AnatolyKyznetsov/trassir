@@ -91,15 +91,19 @@
         padding-bottom: 40px;
 
         &__tabs {
-            gap: 8px;
+            gap: 16px;
             margin-bottom: 0;
         }
 
         &__tab {
-            max-width: 100%;
+            border-radius: 0;
+            width: calc(100% + 32px);
+            max-width: calc(100% + 32px);
             padding: 24px 32px;
-            font-size: 14px;
+            font-size: 16px;
             min-height: 68px;
+            margin-left: -16px;
+            margin-right: -16px;
         }
 
         &__inner {

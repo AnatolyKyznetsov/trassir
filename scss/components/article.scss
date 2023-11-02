@@ -1,4 +1,4 @@
-.app {
+.app__main {
     & > span:not([class]),
     & > div:not([class]),
     & > h1:not([class]),
@@ -11,14 +11,20 @@
     & > img:not([class]),
     & > a {
         @extend .container;
+
+        &:last-child {
+            margin-bottom: 80px;
+        }
     }
 }
 
 .article {
     @extend .text-standard;
+
+    margin-bottom: 40px;
 }
 
-.app,
+.app__main,
 .article {
     & > h1:not([class]) {
         @extend .title__main;
@@ -52,11 +58,23 @@
     }
 
     & > ul:not([class]) {
-        list-style: disc inside;
+        @extend .list;
+
+        & > li {
+            @extend .list__item;
+
+            font-size: inherit !important;
+        }
     }
 
     & > ol:not([class]) {
-        list-style: decimal inside;
+        @extend .list-count;
+
+        & > li {
+            @extend .list__item;
+
+            font-size: inherit !important;
+        }
     }
 
     & > ol:not([class]),
@@ -122,6 +140,10 @@
 
     & > img:not([class]) {
         display: flex;
+        max-width: 100%;
+        max-height: 100%;
+        width: auto;
+        height: auto;
     }
 
     & > img:not([class]),
@@ -143,6 +165,15 @@
 
         &:not(:last-child) {
             margin-bottom: 16px;
+        }
+    }
+}
+
+@media screen and (max-width: $lg) {
+    .app__main,
+    .article {
+        & > table:not([class]) {
+            max-width: calc(100% - 32px);
         }
     }
 }

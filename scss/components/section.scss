@@ -9,12 +9,9 @@
             background: linear-gradient(180deg,  var(--color-main-light) 0%, var(--color-main-light) 50%, var(--color-white) 50%,  var(--color-white) 100%);
         }
 
+        & + .section_bg-grad,
         & + .section_bg {
             padding-top: 0;
-        }
-
-        & + .footer {
-            margin-top: 0;
         }
     }
 
@@ -43,6 +40,10 @@
     .section {
         padding-top: 40px;
 
+        &_bg {
+            padding-bottom: 40px;
+        }
+
         &__inner {
             margin-bottom: 20px;
         }
@@ -58,6 +59,10 @@
     .section {
         &__inner {
             gap: 20px;
+
+            .title__section {
+                max-width: 100%;
+            }
 
             .link_conversion {
                 margin-left: auto;

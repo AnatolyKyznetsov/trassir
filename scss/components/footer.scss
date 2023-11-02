@@ -1,5 +1,4 @@
 .footer {
-    margin-top: 100px;
     padding: 100px 0 40px;
     background: var(--color-conv-second-dark);
 
@@ -120,7 +119,6 @@
 
 @media screen and (max-width: $md) {
     .footer {
-        margin-top: 40px;
         padding: 8px 0px 40px;
 
         &__wrapper {
@@ -159,7 +157,6 @@
                         top: 50%;
                         transform: translateY(-50%);
                         right: 0;
-                        // transition: .1s linear;
                     }
                 }
             }

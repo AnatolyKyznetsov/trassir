@@ -116,12 +116,16 @@
 
         &__top {
             flex-direction: column;
+            gap: 16px;
         }
 
         &__tab {
             height: 74px;
             font-size: 18px;
             border-bottom: 1px solid var(--color-main-light);
+            margin-left: -16px;
+            margin-right: -16px;
+            width: calc(100% + 32px);
         }
 
         &__content {
@@ -130,6 +134,8 @@
 
         &__tab-content {
             &_mob {
+                padding-bottom: 16px;
+
                 &.is-active {
                     display: flex;
                 }

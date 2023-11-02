@@ -1,0 +1,28 @@
+.card-collection {
+    padding-bottom: 100px;
+
+    &__wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        gap: 24px;
+    } 
+
+    .pagination {
+        margin-top: 50px;
+    }
+}
+
+@media screen and (max-width: $md) {
+    .card-collection {
+        padding-bottom: 40px;
+
+        &__wrapper {
+            gap: 16px;
+        }
+
+        .pagination {
+            margin-top: 30px;
+        }
+    }
+}

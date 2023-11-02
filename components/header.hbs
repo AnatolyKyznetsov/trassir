@@ -165,22 +165,27 @@
             </div>
             <div class="header__menu-mob js-headerMenuMob"></div>
         </header>
-
-        {{#if innerPage}}
-            <section class="app__head">
-                <div class="container">
-                    <div class="breadcrumbs">
-                        <a href="javascript:void(0)" class="breadcrumbs__link">Главная</a>
-                        <a href="javascript:void(0)" class="breadcrumbs__link">Каталог</a>
-                        <a href="javascript:void(0)" class="breadcrumbs__link">Камеры</a>
-                        <span class="breadcrumbs__current">Тестовая камера</span>
+        <main class="app__main">
+            {{#if innerPage}}
+                <section class="app__head">
+                    <div class="container">
+                        {{#if breadcrumbs}}
+                            <div class="breadcrumbs">
+                                <a href="javascript:void(0)" class="breadcrumbs__link">Главная</a>
+                                <a href="javascript:void(0)" class="breadcrumbs__link">Тест</a>
+                                <span class="breadcrumbs__current">{{breadcrumbs}}</span>
+                            </div>
+                        {{/if}}
+                        {{#if title}}
+                            <h1 class="app__title">
+                                {{title}}
+                            </h1>
+                        {{/if}}
+                        {{#if description}}
+                            <p class="app__description">
+                                {{description}}
+                            </p>
+                        {{/if}}
                     </div>
-                    <h1 class="app__title">
-                        Заголовок страницы
-                    </h1>
-                    <p class="app__description">
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Similique animi aspernatur ullam, dolores harum reiciendis iure autem explicabo. Excepturi odio eum enim quidem earum inventore doloribus, cumque aspernatur odit laboriosam?
-                    </p>
-                </div>
-            </section>
-        {{/if}}
+                </section>
+            {{/if}}

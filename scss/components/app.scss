@@ -1,4 +1,9 @@
 .app {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    grid-template-columns: 100%;
+    min-height: 100vh;
+
     &__head {
         padding: 40px 0;
     }
@@ -17,7 +22,7 @@
 @media screen and (max-width: $sm) {
     .app {
         &__head {
-            padding-top: 0;
+            padding: 0 0 20px;
         }
 
         &__description {

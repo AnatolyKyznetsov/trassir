@@ -1,0 +1,100 @@
+{{!-- ЭТО ПРОСТО ВЕРСТКА НАШЕГО КОМПОЕНЕТА С КРАКЕНА --}}
+
+<div class="pagination">
+
+
+    <div class="pagination__wrapper">
+        <div class="pagination__btn is-disabled">
+            <svg width="7" height="16" viewBox="0 0 7 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M0.14276 8.43906L5.93443 15.8191C6.12419 16.0607 6.43141 16.0603 6.62085 15.8178C6.81015 15.5753 6.80966 15.1826 6.61988 14.9407L1.17294 7.99997L6.62007 1.05925C6.80983 0.817373 6.81032 0.424843 6.62105 0.182343C6.52608 0.0607815 6.40167 0 6.27726 0C6.15317 0 6.02925 0.0603752 5.93446 0.181093L0.14276 7.56091C0.0513663 7.6771 8.10623e-05 7.83522 8.10623e-05 7.99997C8.10623e-05 8.16472 0.0515132 8.32266 0.14276 8.43906Z">
+                </path>
+            </svg>
+        </div>
+        <div class="pagination__pages">
+            <div class="pagination__item js-paginationCurrentPage is-active">
+                1 </div>
+            <div class="pagination__item ">
+                <a href="/products/?PAGEN_1=2"
+                    onclick="BX.ajax.insertToNode('/products/?PAGEN_1=2&amp;bxajaxid=5f9764299d34af9878b29ca89c4cfebc', 'comp_5f9764299d34af9878b29ca89c4cfebc'); return false;"
+                    class="js-initPanelPreloader">
+                    2 </a>
+            </div>
+            <div class="pagination__item ">
+                <a href="/products/?PAGEN_1=3"
+                    onclick="BX.ajax.insertToNode('/products/?PAGEN_1=3&amp;bxajaxid=5f9764299d34af9878b29ca89c4cfebc', 'comp_5f9764299d34af9878b29ca89c4cfebc'); return false;"
+                    class="js-initPanelPreloader">
+                    3 </a>
+            </div>
+            <div class="pagination__item ">
+                <a href="/products/?PAGEN_1=4"
+                    onclick="BX.ajax.insertToNode('/products/?PAGEN_1=4&amp;bxajaxid=5f9764299d34af9878b29ca89c4cfebc', 'comp_5f9764299d34af9878b29ca89c4cfebc'); return false;"
+                    class="js-initPanelPreloader">
+                    4 </a>
+            </div>
+            <div class="pagination__item ">
+                <a href="/products/?PAGEN_1=1510"
+                    onclick="BX.ajax.insertToNode('/products/?PAGEN_1=1510&amp;bxajaxid=5f9764299d34af9878b29ca89c4cfebc', 'comp_5f9764299d34af9878b29ca89c4cfebc'); return false;"
+                    class="js-initPanelPreloader">
+                    ... </a>
+            </div>
+            <div class="pagination__item ">
+                <a href="/products/?PAGEN_1=3014"
+                    onclick="BX.ajax.insertToNode('/products/?PAGEN_1=3014&amp;bxajaxid=5f9764299d34af9878b29ca89c4cfebc', 'comp_5f9764299d34af9878b29ca89c4cfebc'); return false;"
+                    class="js-initPanelPreloader">
+                    3014 </a>
+            </div>
+        </div>
+        <div class="pagination__btn ">
+            <a href="/products/?PAGEN_1=2"
+                onclick="BX.ajax.insertToNode('/products/?PAGEN_1=2&amp;bxajaxid=5f9764299d34af9878b29ca89c4cfebc', 'comp_5f9764299d34af9878b29ca89c4cfebc'); return false;"
+                class="js-initPanelPreloader">
+                <svg width="7" height="16" viewBox="0 0 7 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M6.61994 8.43906L0.82826 15.8191C0.638503 16.0607 0.331281 16.0603 0.141842 15.8178C-0.047451 15.5753 -0.0469618 15.1826 0.14282 14.9407L5.58976 7.99997L0.142624 1.05925C-0.0471331 0.817373 -0.0476223 0.424843 0.141646 0.182343C0.23661 0.0607815 0.36102 0 0.48543 0C0.609522 0 0.733443 0.0603752 0.828236 0.181093L6.61994 7.56091C6.71133 7.6771 6.76261 7.83522 6.76261 7.99997C6.76261 8.16472 6.71118 8.32266 6.61994 8.43906Z">
+                    </path>
+                </svg>
+            </a>
+        </div>
+    </div>
+    <div class="pagination-per-page">
+        <div class="pagination-per-page__content">
+            <div class="checkbox">
+                <label class="custom-input">
+                    <input type="radio" class="js-paginationPerPageCatalog" value="5" checked="" name="pagination">
+                    <span class="custom-input__item"></span>
+                    <span class="custom-input__title" title="Показывать по 5">Показывать по 5</span>
+                </label>
+            </div>
+            <div class="checkbox">
+                <label class="custom-input">
+                    <input type="radio" class="js-paginationPerPageCatalog" value="10" name="pagination">
+                    <span class="custom-input__item"></span>
+                    <span class="custom-input__title" title="Показывать по 10">Показывать по 10</span>
+                </label>
+            </div>
+            <div class="checkbox">
+                <label class="custom-input">
+                    <input type="radio" class="js-paginationPerPageCatalog" value="20" name="pagination">
+                    <span class="custom-input__item"></span>
+                    <span class="custom-input__title" title="Показывать по 20">Показывать по 20</span>
+                </label>
+            </div>
+            <div class="checkbox">
+                <label class="custom-input">
+                    <input type="radio" class="js-paginationPerPageCatalog" value="50" name="pagination">
+                    <span class="custom-input__item"></span>
+                    <span class="custom-input__title" title="Показывать по 50">Показывать по 50</span>
+                </label>
+            </div>
+            <div class="checkbox">
+                <label class="custom-input">
+                    <input type="radio" class="js-paginationPerPageCatalog" value="100" name="pagination">
+                    <span class="custom-input__item"></span>
+                    <span class="custom-input__title" title="Показывать по 100">Показывать по 100</span>
+                </label>
+            </div>
+        </div>
+        <div class="pagination-per-page__head">Показывать по 5</div>
+    </div>
+</div>

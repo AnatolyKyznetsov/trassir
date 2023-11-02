@@ -7,24 +7,22 @@
 
     &__wrapper {
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
         counter-reset: i;
-        gap: 55px;
+        gap: 24px;
     }
 
     &__card {
+        flex: 3;
         max-width: 360px;
         color: var(--color-neutral-darkness);
         font-size: 18px;
         font-weight: 400;
         line-height: 1.44;
-        position: relative;
-
-        &:last-child {
-            .become-partner__divider {
-                display: none;
-            }
-        }
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
     }
 
     &__img {
@@ -52,14 +50,13 @@
 
     &__divider {
         display: flex;
-        width: 33%;
+        width: auto;
         height: 2px;
-        position: absolute;
+        position: relative;
         background-image: linear-gradient(90deg, var(--color-conv-second-dark), var(--color-conv-second-dark) 75%, transparent 75%, transparent 100%);
         background-size: 12px 2px;
-        top: 80px;
-        left: 100%;
-        margin-left: -45px;
+        flex: 1;
+        margin-top: 70px;
 
         &::after,
         &::before {
@@ -82,6 +79,10 @@
         &::after {
             right: -2px;
         }
+
+        &:last-child {
+            display: none;
+        }
     }
 }
 
@@ -90,10 +91,10 @@
         &__wrapper {
             flex-wrap: wrap;
             gap: 48px;
-            justify-content: flex-start;
         }
 
         &__card {
+            flex: unset;
             max-width: calc(33% - 32px);
             width: 100%;
         }
@@ -118,15 +119,15 @@
     .become-partner {
         &__wrapper {
             flex-direction: column;
-            gap: 60px;
+            gap: 48px;
+            align-items: center;
         }
 
         &__card {
-            font-size: 14px;
+            font-size: 16px;
             max-width: 100%;
             display: flex;
             gap: 16px;
-            align-items: center;
         }
 
         &__img {
@@ -142,35 +143,6 @@
                 line-height: 120px;
                 font-size: 156px;
                 margin-left: -30px;
-            }
-        }
-
-        &__divider {
-            display: flex;
-            margin-left: 0;
-            left: 60px;
-            width: 2px;
-            height: 40px;
-            top: calc(100% + 10px);
-            background-image: linear-gradient(180deg, var(--color-conv-second-dark), var(--color-conv-second-dark) 75%, transparent 75%, transparent 100%);
-            background-size: 2px 6px ;
-            
-
-            &::after,
-            &::before {
-                transform: translateX(-50%);
-                left: 50%;
-                right: auto;
-            }
-
-            &::before {
-                top: -2px;
-            }
-    
-            &::after {
-                top: auto;
-                bottom: 2px;
-                margin-bottom: -2px;
             }
         }
     }

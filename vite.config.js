@@ -9,6 +9,7 @@ export default {
     build: {
         rollupOptions: {
             input: {
+                menu: resolve(__dirname, 'menu.html'),
                 main: resolve(__dirname, 'index.html'),
                 text: resolve(__dirname, 'text.html'),
                 solutions: resolve(__dirname, 'solutions.html'),
@@ -20,6 +21,8 @@ export default {
                 cms: resolve(__dirname, 'cms.html'),
                 dvr: resolve(__dirname, 'dvr.html'),
                 cameras: resolve(__dirname, 'cameras.html'),
+                stocks: resolve(__dirname, 'stocks.html'),
+                stocksItem: resolve(__dirname, 'stocks-item.html'),
             },
         },
     },
