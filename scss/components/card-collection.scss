@@ -26,3 +26,11 @@
         }
     }
 }
+
+@media screen and (max-width: $sm) {
+    .card-collection {
+        &__wrapper {
+            justify-content: center;
+        }
+    }
+}
