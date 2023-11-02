@@ -23,6 +23,8 @@ export default {
                 cameras: resolve(__dirname, 'cameras.html'),
                 stocks: resolve(__dirname, 'stocks.html'),
                 stocksItem: resolve(__dirname, 'stocks-item.html'),
+                cases: resolve(__dirname, 'cases.html'),
+                casesItem: resolve(__dirname, 'cases-item.html'),
             },
         },
     },
