@@ -37,6 +37,10 @@
         font-size: 18px;
         font-weight: 500;
         line-height: 1.44;
+
+        &:hover {
+            color: var(--color-conv-second-dark);
+        }
     }
 
     &__text {
