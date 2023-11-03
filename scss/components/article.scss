@@ -39,7 +39,7 @@
     }
 
     & > h3:not([class]) {
-        @extend .title__section;
+        @extend .title__block-sm;
 
         margin-bottom: 20px;
     }

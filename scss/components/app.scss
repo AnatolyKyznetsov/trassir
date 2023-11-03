@@ -17,6 +17,12 @@
 
         margin-top: 24px;
     }
+
+    .breadcrumbs {
+        &:only-child {
+            margin: 0;
+        }
+    }
 }
 
 @media screen and (max-width: $sm) {

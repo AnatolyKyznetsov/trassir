@@ -1,0 +1,114 @@
+.cases-hero {
+    &__wrapper {
+        position: relative;
+    }
+
+    &__img {
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        max-height: 700px;
+        overflow: hidden;
+
+        img {
+            border-radius: var(--radius-standard);
+            max-width: 100%;
+            height: auto;
+        }
+    }
+
+    &__block {
+        padding: 56px 72px;
+        border-radius: 0px 550px 0px 0px;
+        background: linear-gradient(90deg, #07008C 0.02%, rgba(1, 22, 186, 0.50) 100%);
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        color: var(--color-white);
+        font-size: 40px;
+        font-weight: 600;
+        line-height: 1.3; 
+    }
+
+    &__description {
+        max-width: 80%;
+    }
+
+    &__place {
+        font-size: 18px;
+        margin-top: 16px;
+    }
+
+    &__notice {
+        background: var(--color-main-light);
+        color: var(--color-neutral-dark);
+        font-size: 18px;
+        line-height: 1.44;
+        padding: 56px;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        border-radius: 0 0 var(--radius-standard) var(--radius-standard);
+
+        .title__block {
+            color: var(--color-neutral-darkness);
+            margin-bottom: 0;
+            font-size: 24px;
+            font-weight: 600;
+            line-height: 1.33;
+            display: flex;
+            gap: 16px;
+            
+            &::before {
+                content: '';
+                width: 16px;
+                margin-top: 4px;
+                flex-shrink: 0;
+                height: 21px;
+                display: block;
+                background: url('../images/icons/static/baloon.svg');
+            }
+        }
+    }
+}
+
+@media screen and (max-width: $md) {
+    .cases-hero {
+        .container {
+            padding: 0;
+        }
+
+        &__img {
+            img {
+                border-radius: 0;
+            }
+        }    
+
+        &__block {
+            padding: 32px 16px;
+            border-radius: 0;
+            font-size: 20px;
+        }
+
+        &__place {
+            font-size: 14px;
+            margin-top: 8px;
+        }
+
+        &__description {
+            max-width: 100%;
+        }
+
+        &__notice {
+            padding: 24px 16px;
+            font-size: 16px;
+            gap: 8px;
+
+            .title__block {
+                gap: 8px;
+                font-size: 20px;
+            }
+        }
+    }
+}
