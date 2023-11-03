@@ -9,6 +9,10 @@
         background: url('../images/cms/hero-bg.png') no-repeat center top, #00044c;
     }
 
+    &_videoanalytics {
+        background: url('../images/videoanalytics/hero-bg.png') no-repeat center top, #00044c; 
+    }
+
     &::after {
         content: '';
         height: 120px;
@@ -44,6 +48,9 @@
     }
 
     &__img {
+        max-width: 910px;
+        margin: 0 auto;
+
         img {
             max-width: 100%;
             height: auto;

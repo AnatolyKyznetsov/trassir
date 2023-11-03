@@ -25,6 +25,8 @@ export default {
                 stocksItem: resolve(__dirname, 'stocks-item.html'),
                 cases: resolve(__dirname, 'cases.html'),
                 casesItem: resolve(__dirname, 'cases-item.html'),
+                videoanalytics: resolve(__dirname, 'videoanalytics.html'),
+                product: resolve(__dirname, 'product.html'),
             },
         },
     },

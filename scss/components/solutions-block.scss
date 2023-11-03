@@ -58,6 +58,8 @@
 @media screen and (min-width: $lg) {
     .solutions-block {
         &__item {
+            background: var(--color-white);
+
             &:nth-child(even) {
                 background: var(--color-main-light);
             }
@@ -77,6 +79,8 @@
 @media screen and (min-width: $md) and (max-width: $lg) {
     .solutions-block {
         &__item {
+            background: var(--color-white);
+
             &:nth-child(2),
             &:nth-child(3),
             &:nth-child(6) {
@@ -94,6 +98,7 @@
             max-width: 100%;
             padding: 24px;
             min-height: auto;
+            background: var(--color-white);
 
             &:nth-child(even) {
                 background: var(--color-main-light);
