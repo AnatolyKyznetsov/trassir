@@ -2,6 +2,10 @@
     font-family: var(--font-main);
     color: var(--color-neutral-darkness);
     line-height: 1.5;
+
+    &_grey {
+        color: var(--color-neutral-dark);
+    }
 }
 
 .text-small {
