@@ -31,6 +31,12 @@
             padding: 0 0 20px;
         }
 
+        &__title {
+            &:only-child {
+                margin-top: 20px;
+            }
+        }
+
         &__description {
             margin-top: 18px;
         }
