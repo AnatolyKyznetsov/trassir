@@ -1,16 +1,16 @@
 .ms-hero {
     padding-top: 80px;
-    background: url('../images/vms/hero-bg.png') no-repeat center top, #00044c;
+    background: url('../images/vms/hero-bg.png') no-repeat fixed center top, #00044c;
     color: var(--color-white);
     text-align: center;
     position: relative;
 
     &_cms {
-        background: url('../images/cms/hero-bg.png') no-repeat center top, #00044c;
+        background: url('../images/cms/hero-bg.png') no-repeat fixed center top, #00044c;
     }
 
     &_videoanalytics {
-        background: url('../images/videoanalytics/hero-bg.png') no-repeat center top, #00044c; 
+        background: url('../images/videoanalytics/hero-bg.png') no-repeat fixed center top, #00044c; 
     }
 
     &::after {

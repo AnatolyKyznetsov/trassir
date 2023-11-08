@@ -1,5 +1,9 @@
 .header {
     background: var(--color-white);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    box-shadow: 0px 0px 5px 0px #{HexToRGBA($color-conv-second-dark, 0.3)};
 
     .container {
         display: flex;
@@ -218,15 +222,15 @@
                 justify-content: center;
 
                 svg {
-                    width: 32px;
-                    height: 32px;
-                    fill: var(--color-conv-second-dark);
+                    width: 28px;
+                    height: 28px;
+                    stroke: var(--color-conv-second-dark);
                     transition: .1s linear;
                 }
 
                 &:hover {
                     svg {
-                        fill: var(--color-conv-second-light);
+                        stroke: var(--color-conv-second-light);
                     }
                 }
             }
@@ -306,7 +310,8 @@
             }
 
             .header__search-input {
-                height: 54px;
+                height: 48px;
+                border-radius: var(--radius-standard) 0 0 var(--radius-standard);
             }
 
             .header__search-form {

@@ -205,7 +205,9 @@ document.addEventListener('DOMContentLoaded', () => {
             }
 
             const search = menu.querySelector('.js-headerSearchForm');
+            const input = search.querySelector('.js-headerSearchInput');
             search.classList.toggle('is-active');
+            input.focus();
         });
     };
 
