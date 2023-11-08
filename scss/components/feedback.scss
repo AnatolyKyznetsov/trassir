@@ -29,6 +29,12 @@
     }
 }
 
+@media screen and (max-width: $xl) {
+    .feedback {
+        padding-bottom: 80px;
+    }
+}
+
 @media screen and (max-width: $md) {
     .feedback {
         padding-bottom: 40px;

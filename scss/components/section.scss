@@ -36,6 +36,20 @@
     }
 }
 
+@media screen and (max-width: $xl) {
+    .section {
+        padding-top: 80px;
+
+        &_bg {
+            padding-bottom: 80px;
+        }
+
+        &__inner {
+            margin-bottom: 50px;
+        }
+    }
+}
+
 @media screen and (max-width: $md) {
     .section {
         padding-top: 40px;

@@ -133,14 +133,36 @@
     }
 }
 
+@media screen and (max-width: $xl) {
+    .blue-card {
+        $indent: 280px;
+
+        &__more {
+            transform: translateY($indent);
+            left: 32px;
+            font-size: 15px;
+            bottom: 32px;
+        }
+
+        &__text {
+            font-size: 20px;
+        }
+
+        &:hover {
+            .blue-card__text {
+                &::before {
+                    transform: translateY(-$indent);
+                    font-size: 24px;
+                }
+            }
+        }
+    }
+}
+
 @media screen and (max-width: $lg) {
     .blue-card {
         &:hover {
             .blue-card__text {
-                &::before {
-                    font-size: 24px;
-                }
-
                 &_small {
                     &::before {
                         font-size: 16px;

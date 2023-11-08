@@ -106,6 +106,23 @@
     }
 } 
 
+@media screen and (max-width: $xl) {
+    .nav {
+        &__link,
+        &__item {
+            font-size: 15px;
+            padding: 38px 12px;
+        } 
+
+        &__drop-list {
+            .nav__link {
+                padding: 0 13px;
+            }
+        }
+    
+    }
+}
+
 @media screen and (max-width: $lg) {
     .nav {
         display: none;

@@ -78,6 +78,29 @@
     }
 }
 
+@media screen and (max-width: $xl) {
+    .hero {
+        padding: 80px 0;
+
+        &__img {
+            max-width: 545px;
+            top: -80px;
+        }
+
+        &__title {
+            max-width: 757px;
+        }
+
+        &__benefits {
+            margin-top: 80px;
+        }
+
+        &__benefits-item {
+            font-size: 35px;
+        }
+    }
+}
+
 @media screen and (max-width: $lg) {
     .hero {
         &__benefits {

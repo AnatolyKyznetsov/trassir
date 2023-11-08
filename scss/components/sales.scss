@@ -46,6 +46,25 @@
     }
 }
 
+@media screen and (max-width: $xl) {
+    .sales {
+        padding: 80px 0;
+
+        &__slide {
+            padding: 48px 48px 83px;
+        }
+
+        &__slide-title {
+            max-width: 540px;
+        }
+
+        &__slide-text {
+            max-width: 540px;
+            margin-bottom: 35px;
+        }    
+    }
+}
+
 @media screen and (max-width: 1210px) {
     .sales {
         &__slide-img {

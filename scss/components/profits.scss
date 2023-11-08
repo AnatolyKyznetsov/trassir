@@ -34,6 +34,30 @@
     }
 }
 
+@media screen and (max-width: $xl) {
+    .profits {
+        padding: 80px 0;
+
+        &__wrapper {
+            gap: 24px;
+        }
+
+        &__item {
+            font-size: 16px;
+        }
+
+        &__img {
+            height: 65px;
+
+            img {
+                width: auto;
+                max-height: 100%;
+                max-width: unset;
+            }
+        }
+    }
+}
+
 @media screen and (max-width: $md) {
     .profits {
         padding: 40px 0;
@@ -41,7 +65,12 @@
         &__img {
             width: 64px;
             height: 64px;
-            flex-shrink: 0;
+
+
+            img {
+                max-height: unset;
+                max-width: 100%;
+            }
         }
 
         &__wrapper {

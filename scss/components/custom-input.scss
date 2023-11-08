@@ -89,3 +89,12 @@
         font-size: 16px;
     }
 }
+
+
+@media screen and (max-width: $xl) {
+    .custom-input {
+        &__title {
+            font-size: 14px;
+        }
+    }
+}

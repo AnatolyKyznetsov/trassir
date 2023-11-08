@@ -42,6 +42,20 @@
     }
 }
 
+@media screen and (max-width: $xl) {
+    .solutions {
+        padding-bottom: 80px;
+
+        &__img {
+            height: 280px;
+        }
+
+        &__bottom {
+            padding: 24px 64px 24px 32px;
+        }
+    }
+}
+
 @media screen and (max-width: $md) {
     .solutions {
         padding-bottom: 40px;

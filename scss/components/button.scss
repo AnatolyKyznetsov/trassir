@@ -71,3 +71,10 @@
         background: var(--color-disabled);
     }
 }
+
+@media screen and (max-width: $xl) {
+    .button {
+        height: 48px;
+        font-size: 15px;
+    }
+}

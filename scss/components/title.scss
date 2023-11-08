@@ -45,6 +45,27 @@
     }
 }
 
+@media screen and (max-width: $xl) {
+    .title {
+        &__main {
+            font-size: 47px;
+        }
+
+        &__section {
+            font-size: 35px;
+            margin-bottom: 50px;
+        }
+
+        &__block {
+            font-size: 28px;
+
+            &-sm {
+                font-size: 21px;
+            }
+        }
+    }    
+}
+
 @media screen and (max-width: $md) {
     .title {
         &__main {

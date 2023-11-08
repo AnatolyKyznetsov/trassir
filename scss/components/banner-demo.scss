@@ -93,6 +93,19 @@
     }
 }
 
+@media screen and (max-width: $xl) {
+    .banner-demo {
+        .container {
+            padding-top: 60px;
+            padding-bottom: 60px;
+        }
+
+        &::after {
+            width: calc(100% - 250px);
+        }
+    }
+}
+
 @media screen and (max-width: $lg) {
     .banner-demo {
         &::after {
