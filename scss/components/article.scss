@@ -111,7 +111,7 @@
         max-width: calc(1441px - 32px);
 
         &:not(:last-child) {
-            margin-bottom: 16px;
+            margin-bottom: 32px;
         }
 
         border-collapse: collapse;
@@ -140,7 +140,6 @@
 
     & > img:not([class]) {
         display: flex;
-        max-width: 100%;
         max-height: 100%;
         width: auto;
         height: auto;
@@ -169,6 +168,14 @@
     }
 }
 
+@media screen and (max-width: $xl) {
+    .app__main,
+    .article {
+        & > table:not([class]) {
+            max-width: calc(1262px - 32px);
+        }
+    }
+}
 @media screen and (max-width: $lg) {
     .app__main,
     .article {

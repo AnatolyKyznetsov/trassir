@@ -71,6 +71,13 @@
     }
 }
 
+@media screen and (max-width: $xl) {
+    .breadcrumbs {
+        margin-bottom: 38px;
+        font-size: 15px;
+    }
+}
+
 @media screen and (max-width: $sm) {
     .breadcrumbs {
         height: 48px;

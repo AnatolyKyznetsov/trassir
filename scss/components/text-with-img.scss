@@ -77,6 +77,30 @@
     }
 }
 
+@media screen and (max-width: $xl) {
+    .text-with-img {
+        padding-bottom: 80px;
+
+        &__text {
+            font-size: 17px;
+        }
+
+        &__img {
+            max-width: 50%;
+        }
+
+        &__inner {
+            &::before {
+                top: calc(100% - 30px);
+            }
+            &::after {
+                bottom: calc(100% - 30px);
+            }
+        }
+    
+    }
+}
+
 @media screen and (max-width: $lg) {
     .text-with-img {
         &__img {

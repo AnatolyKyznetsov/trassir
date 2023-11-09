@@ -1,5 +1,5 @@
 .cms-info {
-    padding-bottom: 40px;
+    padding-bottom: 80px;
 
     &__wrapper {
         border-left: 2px dashed var(--color-conv-second-dark);
@@ -70,6 +70,19 @@
 
         &:not(:last-child) {
             margin-bottom: 24px;
+        }
+    }
+}
+
+@media screen and (max-width: $xl) {
+    .cms-info {
+        &__icon {
+            width: 60px;
+        }
+
+        &__card {
+            font-size: 17px;
+            padding: 36px;
         }
     }
 }

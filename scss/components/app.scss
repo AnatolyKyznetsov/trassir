@@ -25,6 +25,19 @@
     }
 }
 
+@media screen and (max-width: $xl) {
+    .app {
+        &__head {
+            padding: 35px 0;
+        }
+
+        &__description {
+            margin-top: 20px;
+        }
+    
+    }
+}
+
 @media screen and (max-width: $sm) {
     .app {
         &__head {

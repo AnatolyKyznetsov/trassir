@@ -51,6 +51,22 @@
     }
 }
 
+@media screen and (max-width: $xl) {
+    .dvr-hero {
+        padding: 40px 0px 60px;
+
+        &__img {
+            max-width: 720px;
+        }
+
+        .hero__benefits {
+            &-item {
+                max-width: 252px;
+            }
+        }
+    }
+}
+
 @media screen and (max-width: $sm) {
     .dvr-hero {
         position: relative;

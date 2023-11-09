@@ -10,6 +10,7 @@
         background: var(--color-white);
         border-radius: var(--radius-standard);
         min-height: 332px;
+        flex: 1;
     }
 
     &__card-title {
@@ -58,6 +59,28 @@
         align-items: center;
         flex-direction: column;
         gap: 16px;
+    }
+}
+
+@media screen and (max-width: $xl) {
+    .solutions-integrtion {
+        &__card {
+            min-height: 314px;
+        }
+
+        &__card-title {
+            font-size: 18px;
+        }
+
+        &__card-item {
+            font-size: 15px;
+        }
+
+        &__notice {
+            padding: 28px;
+            margin-top: 28px;
+            font-size: 18px;
+        }    
     }
 }
 

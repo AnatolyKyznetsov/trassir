@@ -68,3 +68,21 @@
         margin: 0 16px;
     }
 }
+
+@media screen and (max-width: $xl) {
+    .product-card {
+        max-width: 226px;
+
+        &_wide {
+            max-width: 259px;
+
+            .product-card__img {
+                height: 147px;
+            }
+        }
+
+        &__img {
+            height: 200px;
+        }
+    }
+}

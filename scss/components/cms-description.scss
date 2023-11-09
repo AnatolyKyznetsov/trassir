@@ -76,6 +76,19 @@
     }
 }
 
+@media screen and (max-width: $xl) {
+    .cms-description {
+        padding-bottom: 80px;
+
+        &__card {
+            font-size: 18px;
+            padding: 30px;
+            padding-right: 80px;
+            min-height: 222px;
+        }
+    }
+}
+
 @media screen and (max-width: $md) {
     .cms-description {
         padding-bottom: 40px;

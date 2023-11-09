@@ -11,6 +11,13 @@
     }
 }
 
+@media screen and (max-width: $xl) {
+    .geo {
+        height: 580px;
+        margin: 66px 0;
+    }
+}
+
 @media screen and (max-width: $lg) {
     .geo {
         height: 578px;

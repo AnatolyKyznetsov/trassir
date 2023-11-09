@@ -28,6 +28,12 @@
     }
 }
 
+@media screen and (max-width: $xl) {
+    .vms-clients {
+        padding: 80px 0;
+    }
+}
+
 @media screen and (max-width: $lg) {
     .vms-clients {
         &__wrapper {

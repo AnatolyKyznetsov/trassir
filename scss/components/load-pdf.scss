@@ -48,6 +48,20 @@
     }
 }
 
+@media screen and (max-width: $xl) {
+    .load-pdf {
+        &__title {
+            font-size: 20px;
+            gap: 20px;
+
+            &::before {
+                width: 30px;
+                height: 39px;
+            }    
+        }
+    }
+}
+
 @media screen and (max-width: $sm) {
     .load-pdf {
         flex-direction: column;

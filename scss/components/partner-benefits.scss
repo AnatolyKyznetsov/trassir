@@ -2,7 +2,6 @@
     &__tabs {
         display: flex;
         flex-wrap: wrap;
-        align-items: flex-start;
         justify-content: flex-start;
         gap: 24px;
         margin-bottom: 50px;
@@ -78,6 +77,25 @@
     }
 }
 
+@media screen and (max-width: $xl) {
+    .partner-benefits {
+        &__tabs {
+            gap: 16px;
+        }
+
+        &__tab {
+            min-height: 105px;
+            max-width: 295px;
+            font-size: 16px;
+            padding: 16px;
+        }
+
+        &__img {
+            max-width: 50%;
+        }
+    }
+}
+
 @media screen and (max-width: $lg) {
     .partner-benefits {
         &__tab {
@@ -123,6 +141,7 @@
         }
         
         &__img {
+            max-width: 100%;
             border-radius: 0;
             margin: 0 auto;
         }

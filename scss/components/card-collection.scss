@@ -13,6 +13,12 @@
     }
 }
 
+@media screen and (max-width: $xl) {
+    .card-collection {
+        padding-bottom: 80px;
+    }
+}
+
 @media screen and (max-width: $md) {
     .card-collection {
         padding-bottom: 40px;

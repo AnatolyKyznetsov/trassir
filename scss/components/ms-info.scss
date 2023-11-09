@@ -31,6 +31,16 @@
     }
 }
 
+@media screen and (max-width: $xl) {
+    .ms-info {
+        padding: 60px 0;
+
+        &__item {
+            max-width: 210px;
+        }
+    }
+}
+
 @media screen and (max-width: $md) {
     .ms-info {
         padding: 40px 0;

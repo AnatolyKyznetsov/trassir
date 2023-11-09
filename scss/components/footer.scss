@@ -3,9 +3,9 @@
     background: var(--color-conv-second-dark);
 
     &__wrapper {
-        display: flex;
-        align-items: flex-start;
-        justify-content: space-between;
+        display: grid;
+        gap: 24px;
+        grid-template-columns: repeat(6, 1fr);
         gap: 24px;
         padding-bottom: 80px;
         border-bottom: 1px solid #{HexToRGBA($color-main-dark, 0.25)};
@@ -101,12 +101,14 @@
     }
 }
 
-@media screen and (max-width: $lg){
+@media screen and (max-width: $lg) {
     .footer {
         &__wrapper {
+            display: flex;
             gap: 48px;
             flex-wrap: wrap;
             justify-content: flex-start;
+            align-items: flex-start;
         }
 
         &__block {

@@ -50,6 +50,13 @@
     }
 }
 
+@media screen and (max-width: $xl) {
+    .banner-text {
+        padding: 60px 0;
+        font-size: 24px;
+    }
+}
+
 @media screen and (max-width: $lg) {
     .banner-text {
         &::before {

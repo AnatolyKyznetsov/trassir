@@ -73,6 +73,32 @@
     }
 }
 
+@media screen and (max-width: $xl) {
+    .cases-hero {
+        &__img {
+            height: 612px;
+        }
+
+        &__block {
+            padding: 40px;
+            font-size: 35px;
+        }
+
+        &__place {
+            font-size: 17px;
+        }
+
+        &__notice {
+            padding: 40px;
+            font-size: 17px;
+
+            .title__block {
+                font-size: 21px;
+            }
+        }
+    }
+}
+
 @media screen and (max-width: $md) {
     .cases-hero {
         .container {

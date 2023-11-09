@@ -146,6 +146,10 @@
 
         &__text {
             font-size: 20px;
+
+            &_small {
+                font-size: 16px;
+            }
         }
 
         &:hover {
@@ -153,6 +157,12 @@
                 &::before {
                     transform: translateY(-$indent);
                     font-size: 24px;
+                }
+
+                &_small {
+                    &::before {
+                        font-size: 16px;
+                    }
                 }
             }
         }

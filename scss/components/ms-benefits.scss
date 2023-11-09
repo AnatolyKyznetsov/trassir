@@ -34,11 +34,31 @@
     }
 }
 
+@media screen and (max-width: $xl) {
+    .ms-benefits {
+        padding-bottom: 80px;
+
+        &__card {
+            padding-top: 50px;
+            padding-bottom: 50px;
+            font-size: 18px;
+        }
+
+        &__icon {
+            height: 60px;
+
+            img {
+                height: 100%;
+                width: auto;
+            }
+        }
+    }
+}
+
 @media screen and (max-width: $lg) {
     .ms-benefits {
         &__card {
             justify-content: flex-start;
-            font-size: 18px;
         }
     }
 }
@@ -53,7 +73,6 @@
 
         &__card {
             justify-content: flex-start;
-            font-size: 18px;
             flex-direction: row;
             max-width: 100%;
             text-align: left;

@@ -106,6 +106,32 @@
     }
 }
 
+@media screen and (max-width: $xl) {
+    .ms-tabs {
+        &__wrapper {
+            gap: 16px;
+        }
+
+        &__tab {
+            height: 90px;
+
+            svg {
+                width: 28px;
+                height: 28px;
+            }
+        }
+
+        &__tab-text {
+            font-size: 16px;
+        }
+
+        &__slide,
+        &__slider {
+            max-width: 816px;
+        } 
+    }
+}
+
 @media screen and (max-width: $lg) {
     .ms-tabs {
         &__tab-content {
@@ -134,7 +160,7 @@
         &__tab-text {
             display: block;
             color: var(--color-conv-second-dark);
-        }
+        }   
     }
 }
 

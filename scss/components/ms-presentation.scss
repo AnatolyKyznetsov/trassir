@@ -61,6 +61,12 @@
     }
 }
 
+@media screen and (max-width: $xl) {
+    .ms-presentation {
+        padding: 68px 0;
+    }
+}
+
 @media screen and (max-width: $lg) {
     .ms-presentation {
         &::before {

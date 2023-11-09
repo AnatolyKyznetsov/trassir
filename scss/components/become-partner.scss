@@ -86,6 +86,28 @@
     }
 }
 
+@media screen and (max-width: $xl) {
+    .become-partner {
+        padding-bottom: 80px;
+
+        &__card {
+            font-size: 17px;
+        }
+
+        &__img {
+            margin-bottom: 32px;
+
+            &::after {
+                font-size: 182px;
+            }    
+
+            img {
+                transform: scale(.8);
+            }
+        }
+    }
+}
+
 @media screen and (max-width: $lg) {
     .become-partner {
         &__wrapper {
@@ -101,6 +123,12 @@
 
         &__divider {
             display: none;
+        }
+
+        &__img {
+            img {
+                transform: none;
+            }
         }
     }
 }

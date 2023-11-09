@@ -91,6 +91,32 @@
     }
 }
 
+@media screen and (max-width: $xl) {
+    .inner-hero {
+        .container {
+            gap: 78px;
+        }
+
+        &__content {
+            padding: 42px 0px 72px;
+            max-width: 650px;
+        }
+
+        &__img {
+            max-height: 550px;
+        }
+
+        &__subtitle {
+            font-size: 20px;
+        }
+
+        .hero__benefits {
+            gap: 24px;
+            margin-top: 66px;
+        }
+    }
+}
+
 @media screen and (max-width: $lg) {
     .inner-hero {
         position: relative;

@@ -65,6 +65,22 @@
     }
 }
 
+@media screen and (max-width: $xl) {
+    .solutions-modules {
+        padding-bottom: 80px;
+
+        &__inner {
+            padding: 17px 35px;
+            max-height: 512px;
+            min-height: 512px;
+        }
+
+        &__img {
+            max-width: 500px;
+        }
+    }
+}
+
 @media screen and (max-width: 1180px) {
     .solutions-modules {
         &__item {

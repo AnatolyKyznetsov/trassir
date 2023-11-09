@@ -15,8 +15,6 @@
     &__aside {
         max-width: 600px;
         width: 100%;
-        position: sticky;
-        top: 16px;
     }
 
     &__aside-title {
@@ -172,6 +170,26 @@
     .load-pdf,
     .files {
         margin-top: 40px;
+    }
+}
+
+@media screen and (max-width: $xl) {
+    .product-detail {
+        padding-bottom: 80px;
+
+        .container {
+            gap: 80px;
+        }
+
+        &__description {
+            font-size: 16px;
+            margin-top: 32px;
+        }
+
+        .load-pdf,
+        .files {
+            margin-top: 32px;
+        }
     }
 }
 

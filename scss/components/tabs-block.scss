@@ -98,6 +98,28 @@
     }
 }
 
+@media screen and (max-width: $xl) {
+    .tabs-block {
+        $indent: 49px;
+
+        padding-bottom: 80px;
+
+        &__img {
+            margin-right: -$indent;
+            margin-bottom: -$indent;
+        }
+
+        &__tab-content {
+            padding: $indent;
+        }
+
+        &__tab {
+            font-size: 17px;
+            height: 70px;
+        }
+    }
+}
+
 @media screen and (max-width: $lg) {
     .tabs-block {
         &__tab-content {

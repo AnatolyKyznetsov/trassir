@@ -26,9 +26,10 @@
         font-weight: 500;
         line-height: 1.5; 
         width: 454px;
+        flex: 1;
         height: 280px;
         background: var(--color-conv-second-dark);
-        border-radius: var(--radius-stadard);
+        border-radius: var(--radius-standard);
     }
 
     &__buttons {
@@ -38,6 +39,22 @@
 
         .button {
             width: 283px;
+        }
+    }
+}
+
+@media screen and (max-width: $xl) {
+    .solutions-opportunity {
+        padding: 80px 0 50px;
+
+        &__card {
+            height: 245px;
+            font-size: 18px;
+            gap: 18px;
+        }
+
+        &__icon {
+            max-width: 70px;
         }
     }
 }

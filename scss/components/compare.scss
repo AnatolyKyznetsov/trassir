@@ -78,6 +78,12 @@
     }
 }
 
+@media screen and (max-width: $xl) {
+    .compare {
+        padding-bottom: 80px;
+    }
+}
+
 @media screen and (max-width: $md) {
     .compare {
         padding-bottom: 40px;

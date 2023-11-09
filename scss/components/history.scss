@@ -56,6 +56,37 @@
     }
 }
 
+@media screen and (max-width: $xl) {
+    .history {
+        padding-bottom: 80px;
+
+        &__content {
+            max-width: 740px;
+            padding-left: 48px;
+        }    
+
+        &__date {
+            font-size: 22px;
+
+            &::before {
+                left: -63px;
+            }
+        }
+
+        &__title {
+            font-size: 18px;
+        }
+
+        &__item {
+            font-size: 16px;
+        }
+
+        .list {
+            margin-bottom: 50px;
+        }
+    }
+}
+
 @media screen and (max-width: $md) {
     .history {
         padding-top: 200px;
