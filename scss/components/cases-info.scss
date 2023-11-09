@@ -118,6 +118,13 @@
             &:not(:last-child) {
                 margin-bottom: 30px;
             }
+
+            &:last-child {
+                &::before {
+                    height: calc(100% - 31px);
+                    left: -60px;
+                }
+            }
         }
 
         &__content {
