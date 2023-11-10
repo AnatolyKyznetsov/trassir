@@ -139,8 +139,8 @@
     }
 
     & > img:not([class]) {
-        display: flex;
-        max-height: 100%;
+        max-width: 1441px;
+        display: block;
         width: auto;
         height: auto;
     }
@@ -174,6 +174,10 @@
         & > table:not([class]) {
             max-width: calc(1262px - 32px);
         }
+
+        & > img:not([class]) {
+            max-width: 1262px;
+        }
     }
 }
 @media screen and (max-width: $lg) {
@@ -181,6 +185,10 @@
     .article {
         & > table:not([class]) {
             max-width: calc(100% - 32px);
+        }
+
+        & > img:not([class]) {
+            max-width: 100%;
         }
     }
 }

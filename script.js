@@ -293,11 +293,13 @@ document.addEventListener('DOMContentLoaded', () => {
                         copyContent(contents[index], contentsMob[index]);
 
                         if (window.innerWidth < media.md) {
+                            const header = document.querySelector('.js-header');
+
                             setTimeout(() => {
                                 const rect = btn.getBoundingClientRect();
                                 window.scroll({
                                     left:0,
-                                    top: rect.top + document.documentElement.scrollTop - 20,
+                                    top: rect.top + document.documentElement.scrollTop - header.offsetHeight - 20,
                                     behavior: 'smooth',
                                 });
                             }, 10);
@@ -388,6 +390,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const namesBlock = document.querySelector('.js-compareTableNames');
         const wrapper = document.querySelector('.js-compareWrapper');
+        const header = document.querySelector('.js-header');
         let fakeHead = null;
         let fakeHeadHeight = 0;
 
@@ -397,6 +400,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             const cloneElems = namesBlock.cloneNode(true);
             div.append(cloneElems);
+            div.style.top = `${header.offsetHeight}px`;
 
             wrapper.insertBefore(div, table);
             fakeHead = div;
@@ -406,13 +410,13 @@ document.addEventListener('DOMContentLoaded', () => {
             const tableRect = table.getBoundingClientRect();
             const namesRect = namesBlock.getBoundingClientRect();
 
-            const tableVivible = 
+            const tableVisible = 
                 namesRect.top < 0 && 
                 tableRect.top < 0 && 
-                tableRect.top + tableRect.height - fakeHeadHeight > 0 &&
+                tableRect.top + tableRect.height - fakeHeadHeight - header.offsetHeight - 20 > 0 &&
                 window.innerHeight - tableRect.top > 0;
 
-            if (tableVivible) {
+            if (tableVisible) {
                 fakeHead.scrollLeft = table.scrollLeft;
                 fakeHead.classList.add('is-active');
 

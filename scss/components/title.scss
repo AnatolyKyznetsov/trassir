@@ -86,3 +86,12 @@
         }
     }
 }
+
+@media screen and (max-width: $sm) {
+    .title {
+        &__main,
+        &__section {
+            word-break: break-word;
+        } 
+    }
+}

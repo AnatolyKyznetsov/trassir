@@ -76,7 +76,7 @@
 @media screen and (max-width: $xl) {
     .cases-hero {
         &__img {
-            height: 612px;
+            max-height: 612px;
         }
 
         &__block {

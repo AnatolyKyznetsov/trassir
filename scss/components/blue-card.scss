@@ -26,7 +26,6 @@
             svg {
                 fill: var(--color-conv-second-dark);
             }
-    
         }
     }
 
@@ -58,11 +57,6 @@
                 transition: $transition linear;
                 font-size: 32px;
                 visibility: visible;
-            }
-
-            &::after {
-                transition: $transition linear;
-                opacity: 0;
             }
 
             &_small {
@@ -206,6 +200,37 @@
             left: 16px;
             bottom: 16px;
             transform: translateY($indent);
+        }
+    }
+}
+
+@media screen and (max-width: $sm) {
+    .blue-card {
+        &_see-more {
+            .blue-card__more {
+                color: var(--color-conv-second-dark) !important;
+                display: flex !important;
+
+                svg {
+                    fill: var(--color-conv-second-dark) !important;
+                }
+                }
+        }    
+
+        &::after {
+            display: none;
+        }
+
+        &__text {
+            color: var(--color-neutral-darkness) !important;
+
+            &::before {
+                display: none;
+            }
+        }
+
+        &__more {
+            display: none;        
         }
     }
 }

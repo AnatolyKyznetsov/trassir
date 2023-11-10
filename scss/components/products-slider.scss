@@ -49,6 +49,18 @@
     }
 }
 
+@media screen and (max-width: $lg) {
+    .products-slider {
+        margin-right: -16px;
+
+        .product-card {
+            &:last-child {
+                margin-right: 16px;
+            }
+        }
+    }
+}
+
 @media screen and (max-width: $md) {
     .products-slider {
         padding-bottom: 20px;
@@ -76,10 +88,6 @@
     .products-slider {
         .slider-pagination {
             display: none;
-        }
-
-        .product-card {
-            max-width: 100%;
         }
     }
 }

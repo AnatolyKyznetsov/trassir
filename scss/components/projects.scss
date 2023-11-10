@@ -78,7 +78,9 @@
 
 @media screen and (max-width: $lg) {
     .projects {
-        margin-right: -16px;
+        &__slider {
+            margin-right: -16px;
+        }
 
         .projects__slide {
             &:last-child {
@@ -94,6 +96,10 @@
 
         &__img {
             height: 220px;
+
+            img {
+                height: auto;
+            }
         }
 
         &__bottom {
@@ -107,19 +113,10 @@
     }
 }
 
-
 @media screen and (max-width: $sm) {
     .projects {
-        margin-right: 0;
-
         &__slide {
             min-width: unset;
-        }
-
-        .projects__slide {
-            &:last-child {
-                margin-right: 0;
-            }
         }
     }
 }

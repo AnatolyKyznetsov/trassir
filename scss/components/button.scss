@@ -78,3 +78,11 @@
         font-size: 15px;
     }
 }
+
+@media screen and (max-width: $sm) {
+    .button {
+        &_full-screen-mob {
+            width: 100%;
+        }
+    }
+}
