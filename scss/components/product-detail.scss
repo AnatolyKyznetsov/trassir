@@ -118,8 +118,8 @@
     &__description {
         color: var(--color-neutral-darkness);
         font-size: 18px;
-        line-height: 1.44;
-        margin-top: 40px;
+        line-height: 1.5;
+        margin-bottom: 40px;
     }
 
     &__buttons {
@@ -183,7 +183,7 @@
 
         &__description {
             font-size: 16px;
-            margin-top: 32px;
+            margin-bottom: 32px;
         }
 
         .load-pdf,
