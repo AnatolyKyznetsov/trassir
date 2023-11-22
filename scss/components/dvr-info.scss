@@ -110,6 +110,10 @@
         grid-template-columns: repeat(auto-fill, minmax(285px, 1fr));
         gap: 16px;
         margin-top: 24px;
+
+        & + .section__inner {
+            margin-top: 100px;
+        }
     }
 
     &__benefit {
@@ -145,6 +149,15 @@
     }
 }
 
+@media screen and (max-width: $xl) {
+    .dvr-info {
+        &__benefits {
+            & + .section__inner {
+                margin-top: 80px;
+            }
+        }
+    }
+}
 @media screen and (max-width: $lg) {
     .dvr-info {
         &__tab {
@@ -190,7 +203,6 @@
             display: none;
         }
 
-
         &__content {
             &_mob {
                 padding: 24px 0;
@@ -202,6 +214,12 @@
                 .dvr-info__img {
                     max-width: 40%;
                 }
+            }
+        }
+
+        &__benefits {
+            & + .section__inner {
+                margin-top: 40px;
             }
         }
     }

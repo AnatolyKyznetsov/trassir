@@ -23,9 +23,17 @@
                 color: var(--color-white);
             }
         }
+
+        .nav__drop {
+            .nav__drop-item {
+                svg {
+                    transform: rotate(-90deg) !important;
+                }
+            }
+        }
         
         &:hover {
-            .nav__drop-list {
+            & > .nav__drop-list {
                 overflow: visible;
                 height: auto;
                 opacity: 1;
@@ -77,6 +85,11 @@
         height: 0;
         opacity: 0;
         pointer-events: none;
+
+        .nav__drop-list {
+            top: 0;
+            left: 100%;
+        }
 
         .nav__link {
             height: 48px;

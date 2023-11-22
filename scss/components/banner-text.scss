@@ -14,14 +14,13 @@
     }
 
     &__conversion {
-        @extend .button;
-        @extend .button__conversion;
-        @extend .button_for-input;
-
+        background: var(--color-conv-dark);
+        height: 40px;
         font-size: inherit;
         display: inline-flex;
         border-radius: 20px var(--radius-standard) 20px var(--radius-standard);
         padding: 0px 32px;
+        align-items: center;
         margin-left: 8px;
     }
 

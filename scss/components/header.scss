@@ -84,6 +84,7 @@
         justify-content: center;
         transition: .1s linear;
         border-radius: var(--radius-standard);
+        flex-shrink: 0;
 
         svg {
             width: 26px;
@@ -147,6 +148,29 @@
         }
     }
 
+    &__phone {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin-right: 8px;
+        color: var(--color-conv-second-dark);
+        font-size: 18px;
+        font-weight: 500;
+
+        svg {
+            width: 26px;
+            height: 26px;
+            stroke: var(--color-conv-second-dark);
+        }
+
+        &:hover {
+            color: var(--color-conv-second-light);
+
+            svg {
+                stroke: var(--color-conv-second-light);
+            }
+        }
+    }
 }
 
 @media screen and (max-width: $xl) {
@@ -182,13 +206,27 @@
             font-size: 15px;
             height: 42px;
         }
-    
+
+        &__phone {
+            font-size: 15px;
+            gap: 8px;
+
+            svg {
+                width: 20px;
+                height: 20px;
+            }
+        }
     }
 }
 
 @media screen and (max-width: $lg) {
     .header {
         padding: 16px 0;
+
+        &.is-fixed {
+            position: fixed;
+            width: 100%;
+        }
 
         &__mobile {
             display: flex;

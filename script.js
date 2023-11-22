@@ -188,7 +188,9 @@ document.addEventListener('DOMContentLoaded', () => {
             menu.style.height = `calc(100vh - ${headerHeight}px)`;
             menu.classList.toggle('is-active');
             button.classList.toggle('is-active');
-            disableScroll(!menu.classList.contains('is-active'), [ menu ]);
+            header.classList.toggle('is-fixed');
+            
+            disableScroll(!menu.classList.contains('is-active'), [ menu, header ]);
 
             const search = menu.querySelector('.js-headerSearchForm');
 

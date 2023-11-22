@@ -95,11 +95,11 @@
 
             .input {
                 max-width: 100%;
+                border-radius: var(--radius-standard);
             }
 
             .button {
-                padding: 0 32px 0 42px;
-                border-radius: 50px var(--radius-standard) var(--radius-standard) var(--radius-standard);            
+                border-radius: var(--radius-standard);
             }
         }
     }

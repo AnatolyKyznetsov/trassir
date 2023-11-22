@@ -86,6 +86,18 @@
         position: absolute;
         z-index: 12;
 
+        &_left {
+            @extend .pagination-per-page;
+            @extend .pagination-per-page__head;
+
+            left: 19px;
+            max-width: max-content;
+
+            &::before {
+                @extend .dni;
+            }
+        }
+
         &:hover {
             .pagination-per-page__content {                
                 opacity: 1;
@@ -107,13 +119,13 @@
     &-per-page__head {
         color: var(--color-main-darkness);
         font-size: 14px;
-        display: flex;
+        display: inline-flex;
         align-items: center;
         transition: .2s linear;
         cursor: pointer;
 
         &:hover {
-            color: var(--color-conv-second-dark);
+            color: var(--color-neutral-darkness);
         }
     }
 
