@@ -1,0 +1,106 @@
+.kpp-solutions {
+    background: var(--color-main-light);
+
+    &__wrapper {
+        padding-top: 80px;
+        background: var(--color-conv-second-dark);
+        border-radius: 50px 50px 0 0;
+    }
+
+    &__table {
+        background: var(--color-white);
+        padding: 8px 24px;
+        display: flex;
+        flex-direction: column;
+        border-radius: var(--radius-standard) var(--radius-standard) 0 0;
+    }
+
+    &__line {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 16px;
+
+        &:not(:last-child) {
+            border-bottom: 1px solid #{HexToRGBA($color-conv-second-dark, 0.5)};
+        }
+    }
+
+    &__item {
+        max-width: calc(30% - 11px);
+        padding: 16px 0;
+        color: var(--color-conv-second-dark);
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 1.44; 
+
+        &:first-child {
+            max-width: calc(40% - 11px);
+            width: 100%;
+        }
+
+        &:nth-child(2) {
+            text-align: center;
+        }
+
+        &:last-child {
+            text-align: right;
+        }
+    }
+}
+
+@media screen and (max-width: $xl) {
+    .kpp-solutions {
+        &__wrapper {
+            padding-top: 60px;
+        }
+
+        &__item {
+            font-size: 16px;
+        }
+
+        &__table {
+            padding: 8px 16px;
+        }
+    }
+}
+
+@media screen and (max-width: $sm) {
+    .kpp-solutions {
+        &__wrapper {
+            border-radius: 0;
+            padding-top: 20px;
+        }
+
+        &__table {
+            min-width: calc(100% + 32px);
+            margin-left: -16px;
+            margin-right: -16px;
+            border-radius: 0;
+        }
+
+        &__line {
+            flex-wrap: wrap;
+            padding: 16px 0;
+        }
+
+        &__item {
+            max-width: 100%;
+            padding: 0px;
+            text-align: left;
+    
+            &:first-child {
+                max-width: 100%;
+                width: 100%;
+            }
+    
+            &:nth-child(2) {
+                text-align: left;
+            }
+    
+            &:last-child {
+                text-align: left;
+            }
+        }
+    }
+}

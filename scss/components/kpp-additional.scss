@@ -1,0 +1,73 @@
+.kpp-additional {
+    &__wrapper {
+        display: flex;
+        gap: 32px;
+        justify-content: space-between;
+    }
+
+    &__item {
+        max-width: calc(50% - 16px);
+        background: var(--color-white);
+        border-radius: var(--radius-standard);
+        padding: 16px 24px 24px;
+        width: 100%;
+    }
+
+    &__img {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: -24px;
+        margin-left: -24px;
+        margin-bottom: 24px;
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+    }
+
+    &__title {
+        font-size: 20px;
+        text-align: center;
+        line-height: 1.5;
+        color: var(--color-neutral-darkness);
+        padding-bottom: 16px;
+    }
+}
+
+@media screen and (max-width: $xl) {
+    .kpp-additional {
+        &__title {
+            font-size: 18px;
+        }
+    
+        &__img {
+            overflow: hidden;
+            max-height: 300px;
+        }
+    }
+}
+
+@media screen and (max-width: $md) {
+    .kpp-additional {
+        &__wrapper {
+            flex-direction: column;
+        }
+
+        &__item {
+            max-width: 100%;
+        }
+    }
+}
+
+@media screen and (max-width: $sm) {
+    .kpp-additional {
+        &__item {
+            min-width: calc(100% + 32px);
+            margin-left: -16px;
+            margin-right: -16px;
+            border-radius: 0;
+        }
+    }
+}

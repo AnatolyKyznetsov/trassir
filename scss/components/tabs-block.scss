@@ -8,6 +8,12 @@
         align-items: flex-start;
         justify-content: space-between;
         gap: 30px;
+
+        &_big {
+            .tabs-block__tab {
+                height: 100px;
+            }
+        }
     }
 
     &__img {
@@ -19,6 +25,7 @@
         border-radius: 200px 0px 0px 0px;
         overflow: hidden;
         flex-shrink: 0;
+        max-width: 50%;
 
         img {
             width: 100%;
@@ -82,7 +89,14 @@
         display: none;
         gap: 36px;
         justify-content: space-between;
-        align-items: flex-end;
+
+        .article {
+            margin-bottom: 0;
+        }
+
+        &_end {
+            align-items: flex-end;
+        }
 
         &_mob {
             display: none;
@@ -123,11 +137,21 @@
 @media screen and (max-width: $lg) {
     .tabs-block {
         &__tab-content {
-            align-items: flex-start;
+            &_end {
+                align-items: flex-start;
+            }
         }
 
         &__img {
             display: none;
+        }
+
+        &__top {
+            &_big {
+                .tabs-block__tab {
+                    height: 120px;
+                }
+            }
         }
     }
 }
@@ -139,6 +163,12 @@
         &__top {
             flex-direction: column;
             gap: 16px;
+
+            &_big {
+                .tabs-block__tab {
+                    height: 74px;
+                }
+            }
         }
 
         &__tab {
