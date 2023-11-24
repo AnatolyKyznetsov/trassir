@@ -90,6 +90,10 @@
             @extend .pagination-per-page;
             @extend .pagination-per-page__head;
 
+            font-weight: 500 !important;
+            color: var(--color-conv-dark) !important;
+            font-size: 18px !important;
+
             left: 19px;
             max-width: max-content;
 
